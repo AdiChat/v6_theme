@@ -1,0 +1,67 @@
+
+.gray {
+  border: 1px solid #adadad;
+  background-color: #e3e3e3 !important;
+}
+
+.green {
+  border: 1px solid #286500;
+  background-color: #53d000 !important;
+}
+
+.yellow-green {
+  border: 1px solid #286500;
+  background-color: #C8EA00 !important;
+}
+
+.yellow {
+  border: 1px solid #6f6e00;
+  background-color: yellow !important;
+}
+
+.orange {
+  border: 1px solid #b20000;
+  background-color: #FFC543 !important;
+}
+
+.red {
+  border: 1px solid #b20000;
+  background-color: #ff8989 !important;
+}
+
+    #time:hover {
+  -webkit-animation: zomg 0.5s infinite;
+  animation: zomg 0.5s infinite;
+}
+
+#title_spark:hover {
+  -webkit-animation: zomg 0.5s infinite;
+  animation: zomg 0.5s infinite;
+}
+
+.post-card-title:hover {
+  -webkit-animation: zomg 0.5s infinite;
+  animation: zomg 0.5s infinite;
+}
+
+.post-card-excerpt:hover {
+  -webkit-animation: zomg 0.5s infinite;
+  animation: zomg 0.5s infinite;
+}
+
+@-webkit-keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074d9; }
+  32%      { color: #2ecc40; }
+  48%      { color: #ffdc00; }
+  64%      { color: #b10dc9; }
+  80%      { color: #ff4136; }
+}
+@keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074d9; }
+  32%      { color: #2ecc40; }
+  48%      { color: #ffdc00; }
+  64%      { color: #b10dc9; }
+  80%      { color: #ff4136; }
+}

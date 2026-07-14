@@ -1,0 +1,281 @@
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+<header class="site-header outer">
+  <div class="inner">
+    {{> "site-nav"}}
+  </div>
+</header>
+
+{{> "modal-search-bar/modal"}}
+{{> "sidebar/sidebar-css"}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+<main id="site-main" class="site-main outer" role="main">
+<div id="main-posts" class="main-posts">
+
+  {{> "sidebar/left-sidebar-post"}}
+
+  <div class="inner" id="inner">
+
+  <!-- Before Header -->
+
+    <article id="post-full" class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+
+      <header class="post-full-header">
+
+        <h1 class="post-full-title" style="color:#292929; font-size:30px ; ">{{title}}</h1>
+        
+        {{!--  taglist : display the list of tags  --}}
+        <div class="upper_taglist">
+          <h4 id="text" class="less">
+            <div id="taglist">
+              {{#if tags}}
+              {{#foreach tags}}
+              <a target="_blank" href="{{url}}" title="{{name}}" class="tag_item">{{name}}</a>
+              {{/foreach}}
+              {{/if}}
+            </div>
+          </h4>
+        </div>
+        <button id="more" class="more-tags-button">More</button>
+        <button id="less" class="more-tags-button">Less</button>
+        {{!--  taglist --}}
+
+      </header>
+
+      <button id="scrollBtn" title="Go to top">Up</button>
+
+      <div class="post-content">
+      <section class="post-full-content">
+
+        <center>
+        <a href="http://internship.opengenus.org" target="_blank">
+        <picture>
+          <source media="(max-width: 530px)" width="289" height="141" srcset="https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org/assets/images/internship-small.svg">
+          <img
+            src="https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org/assets/images/internship.svg"
+            style="width: 100%; height: auto;" width="539" height="121"
+            loading="lazy" border="0" alt="Internship at OpenGenus">
+        </picture>
+        </a>
+      </center>
+
+        <!--
+        <center>
+        <a href="http://internship.opengenus.org" target="_blank">
+        <picture>
+          <source media="(max-width: 530px)" srcset="https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org/assets/images/internship-small.svg">
+          <img src="https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org/assets/images/internship.svg" style='width:100%;' border="0" alt="Internship at OpenGenus">
+        </picture>
+        </a>
+        </center>
+        -->
+
+        <p style="text-align: center;"><a href="https://amzn.to/3n4OHrJ" target="_blank">Get this book -> Problems on Array: For Interviews and Competitive Programming</a></p>
+
+        <style>
+        .adsense_widget_iq_1 { width: 320px; height: 100px; }
+        @media(min-width: 670px) { .adsense_widget_iq_1 { width: 468px; height: 60px; } }
+        @media(min-width: 1000px) { .adsense_widget_iq_1 { width: 728px; height: 90px; } }
+        </style>
+        <ins class="adsbygoogle adsense_widget_iq_1"
+             style="display:block"
+             data-ad-client="ca-pub-6329206778297580"
+             data-ad-slot="5373864615"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <!-- top (below header) multiplex -->
+        <ins class="adsbygoogle adsense_widget_iq_1"
+             style="display:block"
+             data-ad-format="autorelaxed"
+             data-ad-client="ca-pub-6329206778297580"
+             data-ad-slot="7656465295"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <!-- top ad (og iq) -->
+        <!--
+        <ins class="adsbygoogle adsense_widget_iq_1"
+             style="display:block"
+             data-ad-client="ca-pub-6329206778297580"
+             data-ad-slot="3019138753"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        -->
+
+        {{content}}
+
+        <!-- after content multiplex -->
+        <ins class="adsbygoogle adsense_widget_iq_1"
+             style="display:block"
+             data-ad-format="autorelaxed"
+             data-ad-client="ca-pub-6329206778297580"
+             data-ad-slot="8550309798"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <!-- after content iq.opengenus.org -->
+        <ins class="adsbygoogle adsense_widget_iq_1"
+             style="display:block"
+             data-ad-client="ca-pub-6329206778297580"
+             data-ad-slot="2677909004"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+      </section>
+      </div>
+
+  </div>
+  </div>
+
+  <!-- shuffle button -->
+  {{!-- Email subscribe form at the bottom of the page --}}
+  {{#if @labs.subscribers}}
+  <section class="subscribe-form">
+    <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
+    <p>Get the latest posts delivered right to your inbox</p>
+    {{subscribe_form placeholder="youremail@example.com"}}
+  </section>
+  {{/if}}
+
+  <footer>
+    {{!-- Everything inside the #author tags pulls data from the author --}}
+    <div class="post-full-footer">
+      {{#author}}
+
+      <section class="author-card">
+        {{#if profile_image}}
+        <img class="author-profile-image" src="https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org{{profile_image}}" alt="{{name}}" loading="lazy"/>
+        {{/if}}
+
+        <section class="author-card-content">
+          <h4 class="author-card-name"><a href="{{url}}">{{name}}</a></h4>
+          {{#if bio}}
+          <p>{{bio}}</p>
+          {{else}}
+          <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+          {{/if}}
+        </section>
+      </section>
+
+      <div class="post-full-footer-right">
+        <a class="author-card-button" href="{{url}}">Read More</a>
+      </div>
+
+      {{/author}}
+
+    </div>
+    
+    <script async src="https://use.fontawesome.com/0206006232.js"></script>
+
+    <p style="font-size:30px; text-align:center">Vote for Author of this article: <span id="votebutton"><i class="fa fa-heart-o" aria-hidden="true" ></i> </span></p>
+    
+    {{!-- Displaying secondary authors --}}
+
+    {{#if authors from="2"}}
+    <div class="Authors_list">
+    <p>Improved & Reviewed by:</p><br>
+      {{#foreach authors from="2"}}
+
+      <a href="{{url}}" title="{{name}}" class="author author-{{id}} {{slug}}">
+        <div class="Authors_tag_item " href="{{url}}" title="{{name}}">
+          {{#if profile_image}}
+          <img class="co-author-profile-image" src="https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org{{profile_image}}" alt="{{name}}" loading="lazy" />
+          {{/if}}
+          {{name}}
+        </div>
+      </a>
+
+      {{/foreach}}
+    </div>
+    {{/if}}
+
+  </footer>
+
+  {{> "sidebar/left-sidebar-js"}}
+  
+  </article>
+
+  </div>
+</main>
+
+{{!-- Links to Previous/Next posts --}}
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">
+      {{#if primary_tag}}
+      {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+      {{#if related_posts}}
+      <article class="read-next-card" {{#if ../primary_tag.feature_image}}
+        style="background-image: url(https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org{{../primary_tag.feature_image}})" {{else}} {{#if @blog.cover_image}}
+        style="background-image: url(https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org{{@blog.cover_image}})" {{/if}} {{/if}}>
+        <header class="read-next-card-header">
+          <small class="read-next-card-header-sitetitle">&mdash; {{@blog.title}} &mdash;</small>
+          {{#../primary_tag}}
+          <h3 class="read-next-card-header-title"><a href="{{url}}">{{name}}</a></h3>
+          {{/../primary_tag}}
+        </header>
+        <div class="read-next-divider">{{> "icons/infinity"}}</div>
+        <div class="read-next-card-content">
+          <ul>
+            {{#foreach related_posts}}
+            <li><a href="{{url}}">{{title}}</a></li>
+            {{/foreach}}
+          </ul>
+        </div>
+        <footer class="read-next-card-footer">
+          <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}}
+            →</a>
+        </footer>
+      </article>
+      {{/if}}
+      {{/get}}
+      {{/if}}
+
+      {{!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs --}}
+      {{#next_post}}
+      {{> "post-card"}}
+      {{/next_post}}
+
+      {{!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs --}}
+      {{#prev_post}}
+      {{> "post-card"}}
+      {{/prev_post}}
+
+    </div>
+  </div>
+
+</aside>
+
+{{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
+{{> floating-header}}
+
+{{/post}}
+
+{{#contentFor "scripts"}}
+<script>
+var testid = "a"+{{url}};
+</script>
+
+<script async type="text/javascript" src="{{asset "js/lightbox/lightbox.js"}}"></script>
+<script async type="text/javascript" src="{{asset "js/compressed-post.js"}}"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/compressed-post.css" />
+
+{{/contentFor}}

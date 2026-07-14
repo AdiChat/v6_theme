@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Computer Memory Challenge</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This memory game (by OpenGenus) features a 3x4 memory titles with different emojis related to Computers. There are over 7.5M combinations of this game. Try to set your record.">
+
+
+		<style>
+
+			html, body {
+			    max-width: 100%;
+			    overflow-x: hidden;
+			}
+			
+			header, header a {
+				font-size: 1.5em;
+				margin: auto;
+				text-align: center;
+				text-decoration: none;
+				display: flex;
+				align-items:center;
+				justify-content: center;
+			}
+
+			body {
+				margin: 0;
+				width: 100%;
+				background-color: #333;
+				padding: 20px 0;
+			}
+
+			input {
+				background-color: #333;
+			}
+
+			p, a, ul, div, input, button {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.05em;
+				color: #fff;
+			}
+
+			h1, h2, h3, h4, title {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				text-align: center;
+			}
+
+			button {
+				width: fit-content; 
+				padding: 10px 20px; 
+				background-color: #03a9f4; 
+				color: #fff; 
+				border: 0px solid #333; 
+				border-radius: 3px; 
+				text-transform: uppercase;
+			}
+
+			button:hover { 
+				background-color: #0095d8; 
+			} 
+
+			#chronotime {
+				border: none;
+			}
+
+			.top {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			
+
+			.flex {
+				display: flex;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+			}
+
+			
+
+			@media all and (min-width: 1000px) {
+				.container {
+					width: 650px;
+					margin: auto;
+				}
+				.card {
+					width: 150px;
+					height: 150px;
+					cursor: pointer;
+					padding-bottom: 10px;
+				}
+			}
+
+			@media all and (max-width: 1000px) {
+				.container {
+					width: 94%;
+					margin: auto;
+				}
+				.card {
+					width: 30vw;
+					height: 15vh;
+					cursor: pointer;
+					padding-bottom: 1vw;
+				}
+			}
+
+			.inner {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				transition: transform 0.4s;
+			}
+
+			.inner p {
+				font-size: 3em;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+			}
+
+			.card .flipped {
+				-webkit-transform: rotateY( 180deg );
+				-moz-transform: rotateY( 180deg );
+				-o-transform: rotateY( 180deg );
+				transform: rotateY( 180deg );
+				transform-style: preserve-3d;
+			}
+
+			.front, .back {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				backface-visibility: hidden;
+				border-radius: 3px;
+			}
+
+			.front {
+				background: khaki;
+			}
+
+			.back {
+				background: lightblue;
+				transform: rotateY(180deg);
+				transition: all 0.4s ease-out;
+			}
+
+			.foundCard {
+				background-color: #b5e25a;
+			}
+
+			.modal {
+				display: none; 
+				position: fixed; 
+				z-index: 1;
+				padding-top: 100px; 
+				left: 0;
+				top: 0;
+				width: 100%; 
+				height: 100%; 
+				overflow: auto;
+				background-color: rgb(0,0,0);
+				background-color: rgba(0,0,0,0.4); 
+			}
+
+			.modal-content {
+				background-color: #111111;
+				margin: auto;
+				padding: 20px;
+				border: 1px solid #333;
+				width: 80%;
+				text-align: center;
+				border-radius: 3px;
+			}
+
+			.close {
+				color: #aaaaaa;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: #000;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			</style>
+			<script data-ad-client="ca-pub-6329206778297580" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	</head>
+
+	<body id='body'>
+
+		<header>
+			<a href='https://iq.opengenus.org'>OpenGenus Memory Challenge &#129402</a>
+		</header>
+		
+		<div class='container top'>
+			<div>
+				<br>Number of clicks: <span id="clickcount">0</span>
+				<br>Time : <input type="text" name="chronotime" id="chronotime" value="00:00:00"/>
+			</div>
+			<div>
+				<p>Best score : <span id="best">0</span> clicks
+				<br>Best time : <span id="bestchrono">00:00:000</span></p>
+			</div>
+		</div>
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-6329206778297580"
+		     data-ad-slot="3019138753"
+		     data-ad-format="auto"
+		     data-full-width-responsive="true"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+		<div id="resultats" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Cool</p>
+				<button type="button" id="rejouer"> Replay </button>
+			</div>
+		</div>
+		<br>
+
+		<section class=' container flex'>
+			<div class='card'>
+				<div class='inner' value="0">
+					<p class='front'>&#10068;</p>
+					<p class='back back1'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="1">
+					<p class='front'>&#10068;</p>
+					<p class='back back2'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="2">
+					<p class='front'>&#10068;</p>
+					<p class='back back3'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="3">
+					<p class='front'>&#10068;</p>
+					<p class='back back4'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="4">
+					<p class='front'>&#10068;</p>
+					<p class='back back5'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="5">
+					<p class='front'>&#10068;</p>
+					<p class='back back6'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="6">
+					<p class='front'>&#10068;</p>
+					<p class='back back7'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="7">
+					<p class='front'>&#10068;</p>
+					<p class='back back8'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="8">
+					<p class='front'>&#10068;</p>
+					<p class='back back9'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="9">
+					<p class='front'>&#10068;</p>
+					<p class='back back10'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="10">
+					<p class='front'>&#10068;</p>
+					<p class='back back11'></p>
+				</div>
+			</div>
+			<div class='card'>
+				<div class='inner' value="11">
+					<p class='front'>&#10068;</p>
+					<p class='back back12'></p>
+				</div>
+			</div>
+		</section>
+
+		<br>
+
+		<center>
+			<button type="button" id="playagain"> Play Again :) </button>
+		</center>
+
+		<br>
+
+		<p style="padding-top: 20px; padding-right: 20vw; padding-bottom: 20vh; padding-left: 20vw">
+			This memory game features a 3x4 memory titles with different emojis. As you click on a tile, the emoji under it will be revealed. On clicking another tile, the previous tile is flipped back (emoji hidden) and new tile is revealed. This simple game has nearly <strong>7.5M</strong> combinations in total.
+			<br><br>
+			The objective is to match tiles with same emojis. To match, we need to click on a tile with the same emoji as the currently revealed emoji. If a pair of tiles match, then both tiles are permanently revealed.
+			<br><br>
+			* Minimum moves needed: 12 clicks
+			<br>
+			* Best time ever recorded: 5.39 seconds
+			<br>
+			* Number of game combinations: (12!)/(2^6) = 7,484,400  ~ 7.5M combinations
+			<br><br>
+			This memory game has been developed by researchers at OpenGenus. 
+			<br><br>
+			Explanation for combination: There are a total of 12 elements with 6 distinct elements. Each element repeats twice.
+			For a given combination of 12 elements, we make groups of 4 elements. We need not consider combination of these groups as it is covered in the general 12! combinations.
+			<br><br>
+			Emojis used: &#128181 &#128187 &#128190 &#128240 &#129473 &#128189
+			<br><br>
+			<strong>How to understand if you are good in this game?</strong>
+			<br><br>
+			Once you have viewed an emoji, if you have viewed the other part in previous clicks, you should be able to identify the other part in at most 2 clicks on average. This means you should be able to solve the challenge in at most 30 clicks. 
+			<br><br>
+			According to our research, <strong>94%</strong> of players have taken less than <strong>40 moves</strong>; 75% have taken less than 30 moves; 20% have taken less than 16 moves; <strong>1.9%</strong> have taken less than 14 moves.
+		<center>
+			<button onclick="document.location='https://iq.opengenus.org'">Learn Computing with OpenGenus for free forever :)</button>
+		</center>
+
+		<br><br>
+
+		<center>
+			<button onclick="document.location='http://internship.opengenus.org'">Get an Internship in Computing :)</button>
+		</center>
+
+	</p>
+
+	</body>
+
+	<script type="text/javascript">
+				function shuffle(array) {
+					for (let i = array.length - 1; i > 0; i--) {
+						const j = Math.floor(Math.random() * (i + 1));
+						[array[i], array[j]] = [array[j], array[i]];
+					}
+				}
+
+				var startTime = 0,
+					isStarted = false,
+					startTemps = 0,
+					end = 0,
+					diff = 0,
+					timerID = 0;
+				function chrono(){
+					end = new Date();
+					diff = end - startTemps;
+					diff = new Date(diff);
+					var msec = diff.getMilliseconds();
+					var sec = diff.getSeconds();
+					var min = diff.getMinutes()-30;
+					if (min < 10){	
+						min = "0" + min;
+					}
+					if (sec < 10){	
+						sec = "0" + sec;
+					}
+					if(msec < 10){
+						msec = "00" +msec;
+					}
+					else if(msec < 100){	msec = "0" +msec; 	}
+					document.getElementById("chronotime").value = min + ":" + sec + ":" + msec;
+					timerID = setTimeout("chrono()", 10);
+					//startTemps = end;
+				}
+				function chronoStart(){
+					startTemps = new Date();
+					chrono();
+				}
+				function chronoReset(){
+					document.getElementById("chronotime").value = "00:00:000";
+					startTemps = new Date();
+				}
+				function chronoStop(){
+					clearTimeout(timerID);
+				}
+
+				var cardsArray = [ 	
+					'&#128181;','&#128181;', // money
+					'&#128187;','&#128187;', // computer machine
+					'&#128190;','&#128190;', // floppy disk
+					'&#128240;','&#128240;', // paper
+					'&#129473;','&#129473;', // cake
+					'&#128189;','&#128189;'], // hard disk
+					flippedCard = [],
+					flippedId = [],
+					found = [],
+					clickCount = 0,
+					bestScore = 99,
+					bestChrono = "99:00:000",
+					innerCards = document.querySelectorAll(".inner"),
+					backs = document.querySelectorAll(".back"),
+					clickDisplay = document.getElementById("clickcount"),
+					close = document.getElementsByClassName("close")[0],
+					resultDisplay = document.getElementById("resultats"),
+					resultText = document.querySelector(".modal-content p"),
+					bestChronoDisplay = document.getElementById("bestchrono"),
+					bestScoreDisplay = document.getElementById("best");
+
+				window.onload = start();
+				document.getElementById("rejouer").addEventListener("click", newGame);
+				document.getElementById("playagain").addEventListener("click", newGame);
+
+				function start(){
+					shuffle(cardsArray);
+					assignCards();
+					innerCards.forEach(card => card.addEventListener("click", flippedCards));
+				}
+
+				function assignCards(){
+					for (var i=0; i<cardsArray.length; i++) {
+						backs[i].innerHTML = cardsArray[i];
+					}
+					backs.forEach(back => back.classList.remove("foundCard"));
+				}
+
+
+				function flippedCards() {
+					if (isStarted === false) {
+						chronoStart();
+						isStarted = true;
+					}
+					this.classList.add("flipped");
+					flippedCard.push(this.children[1].innerHTML);
+					flippedId.push(this.getAttribute("value"));
+
+					clickCount++;
+
+					if (flippedId[0] === flippedId[1]) {
+						flippedId.splice(1);
+						flippedCard.splice(1);
+					}
+					if (flippedId.length === 2) {
+						innerCards.forEach(card => card.removeEventListener("click", flippedCards));
+						setTimeout(checkCards, 400);
+					} 
+					clickDisplay.innerHTML = clickCount;
+				}
+
+				function checkCards() {
+					innerCards.forEach(card => card.addEventListener("click", flippedCards));
+					if (flippedCard[0] === flippedCard[1]) {
+						found.push(flippedCard);
+						backs[flippedId[0]].classList.add("foundCard");
+						backs[flippedId[1]].classList.add("foundCard");
+					} else {
+						innerCards[flippedId[0]].classList.remove("flipped");
+						innerCards[flippedId[1]].classList.remove("flipped");
+					}
+					flippedCard = [];
+					flippedId = [];
+					if (found.length === cardsArray.length/2) {
+						results();
+					}
+				}
+
+				function results() {
+					chronoStop();
+					innerCards.forEach(card => card.removeEventListener("click", flippedCards));
+					resultDisplay.style.display = "block";
+					resultText.innerHTML = 	"<h1>Excellent</h1> "
+						+ "You completed this challenge with " + clickCount + " clicks <br>" 
+						+ "within " + chronotime.value + " seconds";
+					if (clickCount < bestScore) {
+						bestScore = clickCount;
+						bestScoreDisplay.innerHTML = bestScore;
+					}
+					if (chronotime.value < bestChrono) {
+						bestChrono = chronotime.value;
+						bestChronoDisplay.innerHTML = bestChrono;
+					}
+					close.onclick = function() {
+						resultDisplay.style.display = "none";
+					}
+					window.onclick = function(event) {
+						if (event.target == resultDisplay) {
+							resultDisplay.style.display = "none";
+						}
+					}
+				}
+				function newGame() {
+					resultDisplay.style.display = "none";
+					clickDisplay.innerHTML = 0;
+					isStarted = false;
+					clickCount = 0;
+					flipped = [];
+					flippedId = [];
+					found = [];
+					innerCards.forEach(card => card.classList.remove("flipped"));
+					chronoReset();
+					chronoStop();
+					start();
+				}
+			</script>
+</html>

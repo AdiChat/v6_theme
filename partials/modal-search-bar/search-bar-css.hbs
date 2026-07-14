@@ -1,0 +1,47 @@
+<style>
+.searchbar {
+height: 36px;
+margin-bottom: 1em;
+margin-top: 1em;
+margin-right: 1.5em;
+}
+.searchbartext {
+height: 33px;
+font-size:  17px;
+padding-left: 4%;
+mix-blend-mode: normal;
+border: 2px solid rgb(163, 163, 163);
+background-color: #ccc;
+color: #ffffff;
+box-sizing: border-box;
+backdrop-filter: blur(4px);
+border-radius: 10px;
+} 
+input:active {
+border: none;
+}
+::placeholder{
+    color: #ffffff;
+}
+.btn-default{
+position: absolute;
+color: rgb(255, 255, 255);
+margin-left: 4.1em;
+margin-top: -1.9em;
+background: transparent;
+width: 32px;
+height: 31px;
+}
+@media screen and (max-width: 417px){
+.btn-default{
+  margin-left: 10%;
+ }
+.searchbartext {
+  width: 125%;
+ }
+}
+@media screen and (max-width: 350px){
+  .btn-default{
+  margin-left: 5%;
+ }
+ </style>

@@ -1,0 +1,62 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+{{#tag}}
+
+<header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+    <div class="inner">
+        {{> "site-nav"}}
+
+<br>
+
+        <div class="site-header-content">
+            <h1 class="site-title">{{name}}</h1>
+            <h2 class="site-description">
+                {{#if description}}
+                    {{description}}
+                {{else}}
+                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                {{/if}}
+            </h2>
+        </div>
+    </div>
+</header>
+{{/tag}}
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- top ad (og iq) -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6329206778297580"
+         data-ad-slot="3019138753"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+        <div class="post-feed">
+
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-59+bd-2y-23+109"
+                 data-ad-client="ca-pub-6329206778297580"
+                 data-ad-slot="9783126023"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+                
+            {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+        </div>
+    </div>
+</main>

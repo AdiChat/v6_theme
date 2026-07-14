@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="burger_menu">
+    <label for="burgertoggle" >&#9776;</label>
+    <input type="checkbox" id="burgertoggle"/>
+
+  </div>
+
+
+
+
+ <div class="navbar-left">
+        {{#if @blog.navigation}}
+            {{navigation}}
+        {{/if}}
+
+    </div>
+
+    <div class="navbar-right">
+      <!--  <div class="social-links"> -->
+          <a class="search_button">
+            <i class="fa fa-search search_toggle" style="cursor:pointer;"></i>
+          </a>
+        <!--    {{#if @blog.facebook}}
+                <a class="social-link social-link-fb" href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+            {{/if}}
+            {{#if @blog.twitter}}
+                <a class="social-link social-link-tw" href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+            {{/if}}
+        </div>
+    <    {{#if @labs.subscribers}}
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        {{else}}  -->
+            <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+      <!--  {{/if}} -->
+    </div>
+
+</nav>

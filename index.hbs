@@ -1,0 +1,65 @@
+{{!< default-index}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default-index.hbs template --}}
+
+{{> "modal-search-bar/modal"}}
+
+{{> "modal-search-bar/homepage-search-bar-css"}}
+
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+
+<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+    <div class="inner">
+
+        {{> "site-nav"}}
+
+        <div class="site-header-content">
+
+            <!--
+            <h1 class="site-title">
+                {{#if @blog.logo}}
+                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" loading="lazy"/>
+                {{else}}
+                    {{@blog.title}}
+                {{/if}}
+            </h1>
+            -->
+
+            <img class="header_image" src="{{asset "images/Logo.svg"}}" loading="lazy">
+
+            <p style="color:white !important" class="site-slogan">{{@blog.description}}</p>
+
+                {{> "modal-search-bar/homepage-search-bar"}}
+
+        </div>
+    </div>
+</header>
+
+<button id="scrollBtn" class="fa fa-angle-up" title="Go to top"></button>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <div class="post-feed">
+
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-59+bd-2y-23+109"
+                 data-ad-client="ca-pub-6329206778297580"
+                 data-ad-slot="9783126023"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+                
+            {{#foreach posts}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+        </div>
+
+    </div>
+</main>

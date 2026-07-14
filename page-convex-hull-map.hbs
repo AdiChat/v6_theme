@@ -1,0 +1,118 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name="theme-color" content="#000000">
+<link rel="manifest" href="https://dotamania.herokuapp.com/manifest.json">
+<link rel="shortcut icon" href="https://dotamania.herokuapp.com/favicon.ico">
+<link rel="stylesheet" href="{{asset "mindmap/content/slick.min.css"}}">
+<link rel="stylesheet" href="{{asset "mindmap/ontent/slick-theme.min.css"}}">
+<link rel="stylesheet" href="{{asset "mindmap/content/main.01f2ceab.css"}}">
+
+{{!< default_map}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+<!DOCTYPE html>
+
+<header class="site-header outer">
+    <div class="inner">
+        {{> "site-nav"}}
+    </div>
+</header>
+
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+<div id='site-nav'></div>
+<svg class="mindmap-svg" id="mindmap-svg" viewBox="-500 -600 1500 1500"
+    style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); background: gray;">
+</svg>
+
+{{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
+{{> floating-header}}
+
+{{/post}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+
+<script type='text/javascript' src="{{asset "mindmap/convex-hull-map.js"}}"></script>
+<script type='text/javascript' src="{{asset "mindmap/initial_data.js"}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        if ($(document).height() > $(window).height()) {
+            var scrollTop = ($('html').scrollTop()) ? $('html').scrollTop() : $('body').scrollTop(); // Works for Chrome, Firefox, IE...
+            $('html').addClass('noscroll').css('top', -scrollTop);
+        }
+
+        g = document.getElementsByClassName('mindmap-svg')[0].getElementsByTagName('g');
+
+        // diable scrolling on map
+        var box = $('.mindmap-svg'),
+            height = box.height(),
+            scrollHeight = box.get(0).scrollHeight;
+        box.off("mousewheel").on("mousewheel", function (event) {
+            var blockScrolling = this.scrollTop === scrollHeight - height && event.deltaY < 0 || this.scrollTop === 0 && event.deltaY > 0;
+            return !blockScrolling;
+        });
+
+        $('.mindmap-svg').bind('wheel mousewheel', function (e) {
+            var delta;
+            if (e.originalEvent.wheelDelta !== undefined)
+                delta = e.originalEvent.wheelDelta;
+            else
+                delta = e.originalEvent.deltaY * -1;
+
+            if (delta > 0) {
+                for (i = 0; i < g.length; i++) {
+                    if (map_scale < max_scale) {
+                        map_scale += 0.01;
+                        g[i].setAttribute("transform", `translate(${translate_x},${translate_y}) scale(${map_scale})`);
+                    }
+                }
+            }
+            else {
+                for (i = 0; i < g.length; i++) {
+                    if (map_scale > min_scale) {
+                        map_scale -= 0.01;
+                        g[i].setAttribute("transform", `translate(${translate_x},${translate_y}) scale(${map_scale})`);
+                    }
+                }
+            }
+        });
+
+        $('.mindmap-svg').bind("mousemove", function (e) {
+            if (e.which == 1) {
+                translate_x = e.pageX - start_x;
+                translate_y = e.pageY - start_y;
+
+                for (i = 0; i < g.length; i++) {
+                    g[i].setAttribute("transform", `translate(${translate_x},${translate_y}) scale(${map_scale})`);
+                }
+            } else {
+                start_x = e.pageX;
+                start_y = e.pageY;
+            }
+        });
+    });
+</script>
+
+<script>
+    all_nodes = document.getElementsByClassName("mindmap-svg")[0].getElementsByTagName("g")[2].getElementsByTagName("foreignObject");
+    function selectNode(node) {
+        this.addEventListener('click', function (e) {
+            e.preventDefault();
+        });
+        url = node_url[node];
+        if (!url.includes("map")) {
+            window.open(url, "_blank");
+        } else {
+            window.open(url, "_self");
+        }
+    }
+</script>
+
+{{/contentFor}}

@@ -1,0 +1,46 @@
+<aside id="left-side-bar-inner" class="left-side-bar-inner">
+  {{#if tags}}
+    <div class="tag-title">
+      <span class="side-bar-tag-name">
+        {{primary_tag.name}}
+        tutorial
+      </span>
+    </div>
+  {{/if}}
+  <div class="left-side-bar-links">
+    <ul>
+
+      <!-- Sidebar Multiplex -->
+      <ins class="adsbygoogle adsense_sidebar_multiplex_1"
+           style="display:block"
+           data-ad-format="autorelaxed"
+           data-ad-client="ca-pub-6329206778297580"
+           data-ad-slot="9028710882"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <!-- Sidebar fixed size 120x250 -->
+      <!--
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:120px;height:250px"
+           data-ad-client="ca-pub-6329206778297580"
+           data-ad-slot="4020428451"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      -->
+
+      {{#foreach tags}}
+        {{#get "posts" filter="primary_tag:{{slug}}"}}
+          {{#foreach posts limit="50"}}
+            <li class="left-side-bar-link"><a
+                target="_blank"
+                href="{{url}}"
+              >{{title}}</a></li>
+          {{/foreach}}
+        {{/get}}
+      {{/foreach}}
+    </ul>
+  </div>
+</aside>

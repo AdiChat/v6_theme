@@ -1,0 +1,21 @@
+  {{!-- LEFT SIDE BAR --}}
+  <div id="left-side-bar-wrapper" class="left-side-bar-wrapper">
+  <div id="first-left" class="first-left">
+    <div id="left-side-bar-top" class="left-side-bar-top">
+      {{> "sidebar/left-side-bar-top"}}
+       {{!-- <button id="view-more" class="view-more">view more</button>
+       <button id="view-more" class="view-more">hide</button> --}}
+    </div>
+  </div>
+  <div class="second-left">
+    {{#if tags}}    
+    <div id="left-side-bar" class="left-side-bar">
+        {{> "sidebar/left-side-bar"}}
+    </div>
+  {{else}}
+    <div id="left-side-bar" class="left-side-bar">
+      {{> "sidebar/left-side-bar-common"}}
+    </div>
+  {{/if}}
+    </div>
+</div>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  {{!-- Base Meta --}}
+  <title>{{meta_title}}</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{!-- Styles'n'Scripts --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/tab.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/head_tab.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/complexity.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/post_page.css"}}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{asset "built/lightbox.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/course_page.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/search_page.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/navbar.css"}}" />
+  <style>
+    a {
+      text-decoration: none !important;
+    }
+
+    #time {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #scrollBtn {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 36px;
+      z-index: 999;
+      border: none;
+      outline: none;
+      background-color: yellow;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50px;
+      width: 45px;
+    }
+
+    #scrollBtn:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 400px) {
+      #scrollBtn {
+        right: 18px;
+        bottom: 80px;
+      }
+    }
+  </style>
+
+  {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+  {{ghost_head}}
+
+</head>
+<div id="nav_toggle" class="navbar_collapse navigation_page">
+  <div id="navbar_close">&times</div>
+  <a href="http://iq.opengenus.org">Home</a>
+  <a href="http://discourse.opengenus.org">Discussions</a>
+  <a href="http://iq.opengenus.org/guide-to-writing-a-note-at-opengenus-iq/">Write at Opengenus IQ</a>
+</div>
+
+<body class="{{body_class}}">
+
+  <div id="search_page" class="search_page search_page_hide">
+    <div class="search_page_close search_toggle">&times</div>
+    <div class="search_page_body">
+      <div id="site-search" style="display:none;" class="search_form">
+        <input class="typeahead search_form_input" type="text" placeholder="Search" />
+        <!--        <div class="search_noresult_image"><img src="{{asset "images/search-empty.svg"}}">
+               <p>No results found</p>
+             </div>-->
+
+        <!--  <div class="search_page_results">
+
+                    <div href="https://www.google.com" class="search_item_image" style="cursor:pointer;"><img src="{{asset "images/search-image.jpg"}}"></div>
+                    <div class="search_item_text">
+                      <div onclick="window.location='https://google.com';"  class="search_item_title" style="cursor:pointer;">Add Search to Ghost using Twitter Typeahead.js</div>
+                      <div class="search_item_description">Add Search to Ghost using Twitter Typeahead.js</div>
+                  </div>
+                </div>-->
+      </div>
+
+
+    </div>
+
+
+  </div>
+  <div class="site-wrapper">
+
+
+
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+
+
+    {{!-- Chat button--}}
+    <div id="Forum_Button">
+      <button id="Discourse_button" class="Discourse_button">
+        <i class="fa fa-comments fa-3x"></i>
+      </button>
+    </div>
+
+    <div id="Discourse_Forum" class="Discourse_Forum">
+      <!--promote the user to discourse forum -->
+      <div class="Discourse_Popup_Container">
+        <span id="Discourse_close" class="Discourse_close">&times;</span>
+        <div id="Discourse_Popup_icon" class="Discourse_Popup_icon">
+          <img src="{{asset "images/Join_community.png"}}" class="community_icon">
+        </div>
+        <div class="Discourse_Popup_Content">
+
+          <p>Visit our discussion forum to ask any question and join our community</p>
+
+          <a target="_blank" class="discourse_link" href="https://discourse.opengenus.org/">View Forum</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- The big email subscribe modal content --}}
+  {{#if @labs.subscribers}}
+  <div id="subscribe" class="subscribe-overlay">
+    <a class="subscribe-overlay-close" href="#"></a>
+    <div class="subscribe-overlay-content">
+      {{#if @blog.logo}}
+      <img class="subscribe-overlay-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+      {{/if}}
+      <h1 class="subscribe-overlay-title">Join the mailbox of Knowledge <br> OpenGenus IQ</h1>
+      <p class="subscribe-overlay-description">Get your daily dose of knowledge delivered straight to your inbox</p>
+      {{subscribe_form placeholder="youremail@example.com"}}
+    </div>
+  </div>
+  {{/if}}
+
+  {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+
+  <script type="text/javascript" src="{{asset "js/chatbox.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/tab.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+  <script type="text/javascript"
+    src="//platform-api.sharethis.com/js/sharethis.js#property=5a8129cbe45fbb001342fed3&product=custom-share-buttons"></script>
+  <script>
+    document.getElementById('scrollBtn').addEventListener('click', function (event) {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      $('#scrollBtn').hide();
+    });
+
+    $(window).bind('mousewheel', function (event) {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("scrollBtn").style.display = "block";
+      } else {
+        document.getElementById("scrollBtn").style.display = "none";
+      };
+    });
+
+
+  </script>
+
+  {{#if pagination.pages}}
+  <script>
+    var maxPages = parseInt('{{pagination.pages}}');
+
+
+
+  </script>
+  <script src="{{asset "js/infinitescroll.js"}}"></script>
+
+
+
+  {{/if}}
+
+  {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+  {{{block "scripts"}}}
+  <script>
+    //Wait for other things to be loaded so the site doesn't wait on the search
+    $(document).ready(function () {
+      //Go grab all the posts on the blog, but only the slug and title fields
+      //That helps limit the amount of data sent and stored locally
+      $.get(ghost.url.api('posts', { limit: "all", fields: "slug,title,feature_image,meta_description" })).done(function (data) {
+        //add all the data returned to a variable
+        var searchData = data.posts;
+
+        //New bloodhound to make it searchable
+        var search = new Bloodhound({
+          datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          local: searchData
+        });
+        $(document).click(function () {
+          $("#toggle").toggle("slide");
+        });
+        //Build the typeahead
+        $('#site-search .typeahead').typeahead(null, {
+          name: 'search',
+          display: 'title',
+          //source is the bloodhound variable
+          source: search,
+          templates: {
+            //display no result image if no result is found
+            empty: [
+              '<div class="search_noresult_image"><img src="{{asset "images/search-empty.svg"}}"><p>No results found</p></div>'
+            ].join('\n'),
+            suggestion: function (data) {
+              if (data.meta_description == null) {
+                data.meta_description = "No description provided";
+              }
+              if (data.feature_image == null) {
+                data.feature_image = "{{asset "images / search - image.jpg"}}";
+              }
+              var post_url = window.location.protocol + '%2F%2F' + window.location.host + "%2F" + data.slug;
+              var parsed_post_url = decodeURIComponent(post_url);
+              //check is description and image are avaialable
+              return '<div class="search_page_results"><a href="' + parsed_post_url + '" class="search_item_image"><img src="' + data.feature_image + '"></a><div class="search_item_text"><a href="' + parsed_post_url + '"class="search_item_title">' + data.title + '</a><div class="search_item_description">' + data.meta_description + '</div></div> </div>';
+            }
+          }
+        });
+        //display and close navbar window and search window
+        $('#navbar_close').bind('click', function () {
+          $('#nav_toggle').toggleClass('navigation_page_open');
+        });
+        $('#burgertoggle').bind('click', function () {
+          $('#nav_toggle').toggleClass('navigation_page_open');
+        });
+        $('.search_toggle').bind('click', function () {
+          $('#search_page').toggleClass('search_page_hide');
+        });
+        //Now show the search bar since getting data was successful
+        $('#site-search').show();
+      }).fail(function () {
+        //If the get request errors out, put an error in the console
+        console.log("Error getting Ghost API Data");
+      });
+    });
+  </script>
+  {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+  {{ghost_foot}}
+
+</body>
+
+</html>

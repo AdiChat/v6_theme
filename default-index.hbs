@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  {{!-- Base Meta --}}
+  <title>{{meta_title}}</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{!-- Styles'n'Scripts --}}
+  
+  <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" /> 
+  <!-- for progress in navigation bar -->
+  <link rel="stylesheet" type="text/css" href="{{asset "built/lightbox.css"}}" />
+  <!-- for syntax highlight -->
+  <link rel="stylesheet" type="text/css" href="{{asset "built/prism.css"}}" />
+  <!-- merge2.css -> complexity.css + post_page.css -->
+  <link rel="stylesheet" type="text/css" href="{{asset "built/merge2.css"}}" />
+
+  <!-- table of contents disabled -->
+  <!--
+  <link rel="stylesheet" type="text/css" href="{{asset "css/head_tab.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/tab.css"}}" />
+  -->
+  <!-- course page is not activated -->
+  <!--
+  <link rel="stylesheet" type="text/css" href="{{asset "css/course_page.css"}}" />
+  -->
+  <link rel="stylesheet" type="text/css" href="{{asset "css/search_page.css"}}" />
+  <!--
+  <link rel="stylesheet" type="text/css" href="{{asset "css/navbar.css"}}" /> -->
+  <style>
+    a {
+      text-decoration: none !important;
+    }
+
+    #time {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #scrollBtn {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 36px;
+      z-index: 999;
+      border: none;
+      outline: none;
+      background-color: #351ed478;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50px;
+      width: 45px;
+    }
+
+    #scrollBtn:hover {
+      background-color: #351ed4;
+    }
+
+    @media (max-width: 480px) {
+      #scrollBtn {
+        right: 18px;
+        bottom: 80px;
+        transform: scale(0.9);
+      }
+    }
+  </style>
+
+  {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+  {{ghost_head}}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://iq.opengenus.org/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://iq.opengenus.org/search/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+</head>
+<div id="nav_toggle" class="navbar_collapse navigation_page">
+  <div id="navbar_close">&times</div>
+  <a href="http://iq.opengenus.org">Home</a>
+  <a href="http://discourse.opengenus.org">Discussions</a>
+  <a href="http://iq.opengenus.org/guide-to-writing-a-note-at-opengenus-iq/">Write at Opengenus IQ</a>
+</div>
+
+<body class="{{body_class}}">
+
+  <div id="search_page" class="search_page search_page_hide">
+    <div class="search_page_close search_toggle">&times</div>
+    <div class="search_page_body">
+      <div id="site-search" style="display:none;" class="search_form">
+        <input class="typeahead search_form_input" type="text" placeholder="Search" />
+      </div>
+    </div>
+  </div>
+  <div class="site-wrapper">
+
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+    {{!-- The footer at the very bottom of the screen --}}
+    <footer class="site-footer outer">
+      <div class="site-footer-content inner">
+        <section class="copyright"><a href="{{@blog.url}}">OpenGenus IQ</a> &copy; {{date format="YYYY"}} All rights
+          reserved ™ [email: <a href="mailto:team@opengenus.org">team@opengenus.org</a>]</section>
+        <nav class="site-footer-nav">
+          <a href="{{@blog.url}}">Top Posts</a>
+          <a href="https://www.linkedin.com/company/opengenus" target="_blank"
+            rel="noopener">LinkedIn</a>
+          {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+        </nav>
+      </div>
+    </footer>
+
+  </div>
+
+  {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
+  <script async src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+  </script>
+  <script async type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+
+  <!--
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="{{asset "js/chatbox.js"}}"></script>
+  -->
+
+  <script async type="text/javascript" src="{{asset "js/tab.js"}}"></script>
+  <!-- for syntax highlight -->
+  <script async type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+
+  <!-- for search
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+  -->
+
+  <script>
+// ===== Scroll to Top ====
+ $(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#scrollBtn').fadeIn(500);    // Fade in the arrow
+    } else {
+        $('#scrollBtn').fadeOut(500);   // Else fade out the arrow
+    }
+});
+$('#scrollBtn').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+
+  </script>
+
+  {{#if pagination.pages}}
+  <script>
+    var maxPages = parseInt('{{pagination.pages}}');
+  </script>
+  <script async src="{{asset "js/infinitescroll.js"}}"></script>
+
+  {{/if}}
+
+  {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+  {{{block "scripts"}}}
+
+  {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+  {{ghost_foot}}
+</body>
+</html>
