@@ -197,7 +197,7 @@
     $(document).ready(function () {
       //Go grab all the posts on the blog, but only the slug and title fields
       //That helps limit the amount of data sent and stored locally
-      $.get(ghost.url.api('posts', { limit: "all", fields: "slug,title,feature_image,meta_description" })).done(function (data) {
+      $.get("{{@site.url}}/ghost/api/content/posts/?key=MY_CONTENT_API_KEY&limit=all&fields=slug,title,feature_image,meta_description").done(function (data) {
         //add all the data returned to a variable
         var searchData = data.posts;
 
