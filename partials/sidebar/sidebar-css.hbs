@@ -158,4 +158,31 @@
     display: none;
   }
 }
+
+.left-side-bar,
+.top-side-bar-links {
+    scrollbar-width: thin;              /* Firefox */
+    scrollbar-color: #c7ced6 transparent;
+}
+
+.left-side-bar::-webkit-scrollbar,
+.top-side-bar-links::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left-side-bar::-webkit-scrollbar-thumb,
+.top-side-bar-links::-webkit-scrollbar-thumb {
+    background: #c7ced6;
+    border-radius: 8px;
+}
+
+.left-side-bar::-webkit-scrollbar-thumb:hover,
+.top-side-bar-links::-webkit-scrollbar-thumb:hover {
+    background: #aab3bd;
+}
+
+.left-side-bar::-webkit-scrollbar-track,
+.top-side-bar-links::-webkit-scrollbar-track {
+    background: transparent;
+}
 </style>

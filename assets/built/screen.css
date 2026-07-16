@@ -2086,3 +2086,7 @@ figure img { display: block; margin: 0 auto; }
                  "Helvetica Neue", Arial, sans-serif;
     line-height: 1.7;
 }
+
+.post-full-content:before, .post-full-content:after {
+    display: none;
+}
