@@ -63,13 +63,13 @@
     {{!-- The footer at the very bottom of the screen --}}
     <footer class="site-footer outer">
       <div class="site-footer-content inner">
-        <section class="copyright"><a href="{{@blog.url}}">OpenGenus IQ</a> &copy; {{date format="YYYY"}} All rights
+        <section class="copyright"><a href="{{@site.url}}">OpenGenus IQ</a> &copy; {{date format="YYYY"}} All rights
           reserved ™ [email: <a href="mailto:team@opengenus.org">team@opengenus.org</a>]</section>
         <nav class="site-footer-nav">
-          <a href="{{@blog.url}}">Top Posts</a>
+          <a href="{{@site.url}}">Top Posts</a>
           <a href="https://www.linkedin.com/company/opengenus" target="_blank"
             rel="noopener">LinkedIn</a>
-          {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+          {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
         </nav>
       </div>
     </footer>

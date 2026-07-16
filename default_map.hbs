@@ -133,16 +133,15 @@
   </div>
 
   {{!-- The big email subscribe modal content --}}
-  {{#if @labs.subscribers}}
+  {{#if @site.members_enabled}}
   <div id="subscribe" class="subscribe-overlay">
     <a class="subscribe-overlay-close" href="#"></a>
     <div class="subscribe-overlay-content">
-      {{#if @blog.logo}}
-      <img class="subscribe-overlay-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+      {{#if @site.logo}}
+      <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
       {{/if}}
       <h1 class="subscribe-overlay-title">Join the mailbox of Knowledge <br> OpenGenus IQ</h1>
       <p class="subscribe-overlay-description">Get your daily dose of knowledge delivered straight to your inbox</p>
-      {{subscribe_form placeholder="youremail@example.com"}}
     </div>
   </div>
   {{/if}}

@@ -1,0 +1,21 @@
+The usage of {{#if author.*}} is no longer supported and should be replaced with {{#if primary_author.*}}or {{#if authors.[#].*}}.
+Ghost allows multiple authors to be assigned to a post, so all helpers have been reworked to account for this.
+Find more information about the {{authors}} helper here
+Affected files
+partials/post-card.hbs: Please remove or replace {{#if author.*}} from this template
+The usage of {{error.code}} is deprecated and should be replaced with {{error.statusCode}}.
+When in error context, e.g. in the error.hbs template, replace {{code}} with {{statusCode}}.
+Find more information about the error.hbs template here.
+Affected files
+error-404.hbs: Please remove or replace {{error.code}} from this template
+error.hbs: Please remove or replace {{error.code}} from this template
+The .kg-width-wide CSS class is required otherwise wide images will appear unstyled.Find out more about required theme changes for the Koenig editor here.
+Affected files
+styles
+The .kg-width-full CSS class is required otherwise wide images will appear unstyled.Find out more about required theme changes for the Koenig editor here.
+Affected files
+styles
+The v0.1 API & Public API Beta have been removed, along with the public/ghost-sdk.min.js file & the ghost.url.api() helper.
+All code relying on the v0.1 API must be upgraded to use the new API.
+Affected files
+default_map.hbs

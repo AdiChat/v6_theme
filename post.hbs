@@ -147,18 +147,17 @@ into the {body} of the default.hbs template --}}
 
   <!-- shuffle button -->
   {{!-- Email subscribe form at the bottom of the page --}}
-  {{#if @labs.subscribers}}
+  {{#if @site.members_enabled}}
   <section class="subscribe-form">
-    <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
+    <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
     <p>Get the latest posts delivered right to your inbox</p>
-    {{subscribe_form placeholder="youremail@example.com"}}
   </section>
   {{/if}}
 
   <footer>
     {{!-- Everything inside the #author tags pulls data from the author --}}
     <div class="post-full-footer">
-      {{#author}}
+      {{#primary_author}}
 
       <section class="author-card">
         {{#if profile_image}}
@@ -179,7 +178,7 @@ into the {body} of the default.hbs template --}}
         <a class="author-card-button" href="{{url}}">Read More</a>
       </div>
 
-      {{/author}}
+      {{/primary_author}}
 
     </div>
     
@@ -224,10 +223,10 @@ into the {body} of the default.hbs template --}}
       {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
       {{#if related_posts}}
       <article class="read-next-card" {{#if ../primary_tag.feature_image}}
-        style="background-image: url(https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org{{../primary_tag.feature_image}})" {{else}} {{#if @blog.cover_image}}
-        style="background-image: url(https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org{{@blog.cover_image}})" {{/if}} {{/if}}>
+        style="background-image: url(https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org{{../primary_tag.feature_image}})" {{else}} {{#if @site.cover_image}}
+        style="background-image: url(https://iq-opengenus-org.cdn.ampproject.org/i/s/iq.opengenus.org{{@site.cover_image}})" {{/if}} {{/if}}>
         <header class="read-next-card-header">
-          <small class="read-next-card-header-sitetitle">&mdash; {{@blog.title}} &mdash;</small>
+          <small class="read-next-card-header-sitetitle">&mdash; {{@site.title}} &mdash;</small>
           {{#../primary_tag}}
           <h3 class="read-next-card-header-title"><a href="{{url}}">{{name}}</a></h3>
           {{/../primary_tag}}

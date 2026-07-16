@@ -8,7 +8,7 @@ into the {body} of the default-index.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 
-<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+<header class="site-header outer {{#if @site.cover_image}}" style="background-image: url({{@site.cover_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
 
         {{> "site-nav"}}
@@ -17,17 +17,17 @@ into the {body} of the default-index.hbs template --}}
 
             <!--
             <h1 class="site-title">
-                {{#if @blog.logo}}
-                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" loading="lazy"/>
+                {{#if @site.logo}}
+                    <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}" loading="lazy"/>
                 {{else}}
-                    {{@blog.title}}
+                    {{@site.title}}
                 {{/if}}
             </h1>
             -->
 
             <img class="header_image" src="{{asset "images/Logo.svg"}}" loading="lazy">
 
-            <p style="color:white !important" class="site-slogan">{{@blog.description}}</p>
+            <p style="color:white !important" class="site-slogan">{{@site.description}}</p>
 
                 {{> "modal-search-bar/homepage-search-bar"}}
 
