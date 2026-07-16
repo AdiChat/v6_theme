@@ -53,7 +53,7 @@ into the {body} of the default.hbs template --}}
       <div class="post-content">
       <section class="post-full-content">
 
-        <center>
+        <div id="og-internship-ad" style="display:none; text-align:center;">
         <a href="http://internship.opengenus.org" target="_blank">
         <picture>
           <source media="(max-width: 530px)" width="289" height="141" srcset="/assets/images/internship-small.svg">
@@ -63,7 +63,7 @@ into the {body} of the default.hbs template --}}
             loading="lazy" border="0" alt="Internship at OpenGenus">
         </picture>
         </a>
-      </center>
+      </div>
 
         <!--
         <center>
@@ -74,9 +74,9 @@ into the {body} of the default.hbs template --}}
         </picture>
         </a>
         </center>
-        -->
 
         <p style="text-align: center;"><a href="https://amzn.to/3n4OHrJ" target="_blank">Get this book -> Problems on Array: For Interviews and Competitive Programming</a></p>
+        -->
 
         <style>
         .adsense_widget_iq_1 { width: 320px; height: 100px; }
@@ -271,6 +271,15 @@ into the {body} of the default.hbs template --}}
 {{#contentFor "scripts"}}
 <script>
 var testid = "a"+{{url}};
+
+document.addEventListener('DOMContentLoaded', function (){
+  var content = document.querySelector('.post-full-content');
+  var ad = document.getElementById('og-internship-ad');
+  if (!content || !ad) return;
+  var paras = content.querySelectorAll('p');
+  var target = paras[1] || paras[0];
+  if (target) {target.insertAdjacentElement('afterend', ad); ad.style.display = 'block'; }
+})
 </script>
 
 <script async type="text/javascript" src="{{asset "js/lightbox/lightbox.js"}}"></script>

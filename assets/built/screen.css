@@ -2090,3 +2090,29 @@ figure img { display: block; margin: 0 auto; }
 .post-full-content:before, .post-full-content:after {
     display: none;
 }
+
+/* --- Apple-style refinement --- */
+
+.post-full-content {
+    color: #1d1d1f;
+} /* overall text; crisper ink */
+
+.nav li a {
+    color: #1d1d1f;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    opacity: .82;
+    transition: opacity .15s ease, color .15s ease;
+} /* top navigation */
+
+.nav li a:hover {
+    opacity: 1;
+    color: #1d1d1f;
+}
+
+.post-card-tags {
+    color: #6e6e73;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+} /* tags on cards */
