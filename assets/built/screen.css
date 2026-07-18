@@ -2116,3 +2116,43 @@ figure img { display: block; margin: 0 auto; }
     letter-spacing: .04em;
     text-transform: uppercase;
 } /* tags on cards */
+.site-age{
+    display: inline-block;
+    color:#fff;
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.28);
+    padding:4px 14px;
+    border-radius:980px;
+    font-size:1.25rem;
+    font-weight:600;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    margin:0 0 .6em;
+    -webkit-backdrop-filter:blur(2px);
+    backdrop-filter:blur(2px);
+}
+.site-age::before {
+    content: "🛡️ ";
+}
+.post-full-title{
+    color:#1d1d1f;
+    font-weight:600;
+    letter-spacing:-0.022em;
+    line-height:1.08;
+}
+.post-full-header {
+    padding-bottom: 2.5vw;
+}
+.post-full-content {
+    padding-top: 1px;
+}
+.post-full-content .adsbygoogle:first-child {
+    margin: 0 0 8px;
+}
+#taglist .tag_item {
+    background:#f5f5f7; color:#1d1d1f; border:1px solid #e3e6ea;
+    border-radius:980px; padding:5px 12px; font-weight:500; letter-spacing:-0.01em;
+}
+#taglist .tag_item:hover {
+    background:#e8e8ed; border-color:#d2d2d7; color:#1d1d1f;
+}

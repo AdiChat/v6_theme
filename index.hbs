@@ -27,6 +27,17 @@ into the {body} of the default-index.hbs template --}}
 
             <img class="header_image" src="{{asset "images/Logo.svg"}}" loading="lazy">
 
+            <p class="site-age" id="site-age"></p>
+            <script>
+            (function(){
+                var start = new Date('2017-09-06T00:00:00Z'), now=new Date();
+                var m=(now.getFullYear()-start.getFullYear())*12+(now.getMonth()-start.getMonth());
+                if(now.getDate()<start.getDate()) m--;
+                var y=Math.floor(m/12), mo=m%12, el=document.getElementById('site-age');
+                if (el) el.textContent='Serving Computing knowledge for '+y+' years'+(mo?' & '+mo+' months':'')+' - since 2017';
+            })();
+            </script>
+
             <p style="color:white !important" class="site-slogan">{{@site.description}}</p>
 
                 {{> "modal-search-bar/homepage-search-bar"}}

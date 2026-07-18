@@ -563,7 +563,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 @media (max-width: 500px) {
     .post-full-header {
-        padding: 2vw 3vw 10vw;
+        padding: 2vw 3vw 3vw;
     }
 }
 
@@ -1920,4 +1920,22 @@ Usage (In Ghost editor):
     .site-footer-nav a:first-child {
         margin-left: 0;
     }
+}
+
+.site-age{
+    color:#6e6e73;
+    font-size:1.3rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    margin:0 0 .6em;
+}
+.post-full-title{
+    color:#1d1d1f;
+    font-weight:600;
+    letter-spacing:-0.022em;
+    line-height:1.08;
+}
+.post-full-header {
+    padding-bottom: 2.5vw;
 }
