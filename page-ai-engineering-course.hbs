@@ -1,0 +1,569 @@
+{{!< default}}
+{{!-- Custom page template. Create a Ghost Page with slug "ai-engineering-course".
+    Replace the three LEMONSQUEEZY_* placeholder links once Lemon Squeezy is approved. --}}
+
+<style>
+.ogc{
+  --ink:#1d1d1f;
+  --ink2:#6e6e73;
+  --hair:#e3e6ea;
+  --surf:#f5f5f7;
+  --acc:#3eb0ef;
+  color:var(--ink);
+  line-height:1.6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+.ogc a{
+  color:var(--acc);
+  text-decoration:none;
+}
+
+.ogc .wrap{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+.ogc .hero{
+  background:#1d1d1f;
+  color:#fff;
+  text-align:center;
+  padding:70px 24px 58px;
+}
+
+.ogc .badge{
+  display:inline-block;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  padding:5px 15px;
+  border-radius:980px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+
+.ogc .hero h1{
+  font-size:clamp(32px,6vw,56px);
+  line-height:1.08;
+  letter-spacing:-.02em;
+  font-weight:700;
+  margin:0 auto 14px;
+  max-width:20ch;
+}
+
+.ogc .hero .sub{
+  color:#c7c9cc;
+  font-size:clamp(16px,2.4vw,20px);
+  max-width:60ch;
+  margin:0 auto 12px;
+}
+
+.ogc .hero .start{
+  color:#8fd0f5;
+  font-weight:600;
+  font-size:15px;
+  margin:0 0 26px;
+}
+
+.ogc .hero .updated{
+  color:#8a8d91;
+  font-size:13px;
+  margin-top:14px;
+}
+
+.ogc .cta{
+  display:inline-block;
+  background:var(--acc);
+  color:#fff;
+  font-weight:600;
+  font-size:17px;
+  padding:13px 28px;
+  border-radius:10px;
+}
+
+.ogc .trust{
+  margin-top:30px;
+  color:#a9acb0;
+  font-size:14px;
+  display:flex;
+  gap:8px 20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.ogc section{
+  padding:56px 0;
+}
+
+.ogc h2{
+  text-align:center;
+  font-size:clamp(24px,3.4vw,34px);
+  letter-spacing:-.02em;
+  margin:0 0 10px;
+}
+
+.ogc .lead{
+  text-align:center;
+  color:var(--ink2);
+  max-width:64ch;
+  margin:0 auto 34px;
+}
+
+.ogc .cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.ogc .card{
+  border:1px solid var(--hair);
+  border-radius:14px;
+  padding:22px;
+}
+
+.ogc .card .ico{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  background:#eaf6fe;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:12px;
+}
+
+.ogc .card h3{
+  margin:0 0 6px;
+  font-size:17px;
+}
+
+.ogc .card p{
+  margin:0;
+  color:var(--ink2);
+  font-size:14px;
+}
+
+.ogc .incl{
+  max-width:700px;
+  margin:0 auto;
+  padding:0;
+}
+
+.ogc .incl li{
+  list-style:none;
+  padding:9px 0 9px 34px;
+  position:relative;
+}
+
+.ogc .incl li:before{
+  content:"\2713";
+  position:absolute;
+  left:0;
+  top:9px;
+  color:var(--acc);
+  font-weight:700;
+}
+
+.ogc .price{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  align-items:start;
+}
+
+.ogc .tier{
+  border:1px solid var(--hair);
+  border-radius:16px;
+  padding:26px;
+  position:relative;
+}
+
+.ogc .tier.best{
+  border-color:var(--acc);
+  box-shadow:0 6px 24px rgba(62,176,239,.12);
+}
+
+.ogc .tier .flag{
+  position:absolute;
+  top:-12px;
+  right:18px;
+  background:var(--acc);
+  color:#fff;
+  font-size:12px;
+  font-weight:700;
+  padding:3px 10px;
+  border-radius:980px;
+}
+
+.ogc .tier .flag.top{
+  background:#1d1d1f;
+}
+
+.ogc .tier .was{
+  color:var(--ink2);
+  text-decoration:line-through;
+  font-weight:500;
+  font-size:16px;
+  margin-right:8px;
+}
+
+.ogc .tier h3{
+  margin:0 0 4px;
+  font-size:19px;
+}
+
+.ogc .tier .amt{
+  font-size:30px;
+  font-weight:800;
+  letter-spacing:-.02em;
+  margin:6px 0 10px;
+}
+
+.ogc .tier .amt small{
+  font-size:14px;
+  color:var(--ink2);
+  font-weight:500;
+}
+
+.ogc .tier ul{
+  padding:0;
+  margin:0;
+}
+
+.ogc .tier li{
+  list-style:none;
+  padding:6px 0 6px 24px;
+  position:relative;
+  font-size:14px;
+}
+
+.ogc .tier li:before{
+  content:"\2713";
+  position:absolute;
+  left:0;
+  color:var(--acc);
+  font-weight:700;
+}
+
+.ogc .tier .cta{
+  display:block;
+  text-align:center;
+  margin-top:18px;
+  font-size:15px;
+  padding:11px 18px;
+}
+
+.ogc .steps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+
+.ogc .step .num{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#eaf6fe;
+  color:var(--acc);
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center; margin-bottom:10px; }
+.ogc .step h3{ margin:0 0 3px; font-size:15px; }
+.ogc .step p{ margin:0; color:var(--ink2); font-size:13px; }
+.ogc .fin{ text-align:center; color:var(--ink2); font-size:13px; margin-top:22px; }
+@media (max-width:820px){
+  .ogc .cards,
+  .ogc .price{ grid-template-columns:1fr; }
+  .ogc .steps{ grid-template-columns:1fr 1fr; }
+}
+</style>
+
+{{#post}}
+{{> "site-nav"}}
+
+<div class="ogc">
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">&#127894; By OpenGenus &middot; Since 2017</span>
+
+      <h1>The AI Engineering Course</h1>
+
+      <p class="sub">
+        Go from AI basics to production:
+        <b>GPU kernels, LLM serving, and model-level optimization</b>
+        &mdash; the AI-systems skills companies actually pay for.
+      </p>
+
+      <p class="start">
+        &#x9989; Rolling admission &mdash; enroll and start within a day.
+        1:1 guided.
+      </p>
+
+      <a class="cta" href="/pricing">Enroll now &rarr;</a>
+
+      <div class="trust">
+        <span><b>20+</b> research citations</span>
+        <span>&middot;</span>
+        <span><b>2,500+</b> contributors</span>
+        <span>&middot;</span>
+        <span>book rated <b>4.8★9733;</b></span>
+      </div>
+
+      <p class="updated">
+        Curriculum updated for {{date format="YYYY"}}
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+
+      <h2>What you'll learn</h2>
+
+      <p class="lead">
+        A focused path into real AI engineering &mdash;
+        the deep, in-demand skills most courses skip.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="ico">&#128216;</div>
+          <h3>AI foundations (brief)</h3>
+          <p>
+            Just enough attention, transformers, and CNNs
+            to ground everything that follows.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="ico">&#128421;</div>
+          <h3>GPU hardware basics</h3>
+          <p>
+            How GPUs really work &mdash; memory, compute,
+            and why performance is where it is.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="ico">&#128296;</div>
+          <h3>Kernel development</h3>
+          <p>
+            Write and reason about GPU kernels &mdash;
+            the core of high-performance AI.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="ico">&#128640;</div>
+          <h3>LLM serving</h3>
+          <p>
+            Production inference, throughput/latency,
+            and prefill/decode (P/D) disaggregation.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="ico">&#9889;</div>
+          <h3>Model-level optimization</h3>
+          <p>
+            Operator fusion, quantization,
+            and the techniques that make models fast.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="ico">&#128161;</div>
+          <h3>AI patent case studies</h3>
+          <p>
+            Break down real, recent patents in the AI domain
+            to see how innovation is built and protected.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fafbfc">
+    <div class="wrap">
+
+      <h2>What's included</h2>
+
+      <ul class="incl">
+
+        <li>
+          Structured <b>1:1 guided</b> lessons built on
+          OpenGenus's cited, up-to-date material.
+        </li>
+
+        <li>
+          A <b>hands-on benchmarking lab</b> (Pro) &mdash;
+          a <b>code toolkit</b>
+          (starter GPU kernels, profiling &amp; benchmarking scripts,
+          an LLM-serving harness)
+          to profile and optimize real AI workloads,
+          delivered as a <b>capsone</b> project for your CV.
+        </li>
+
+        <li>
+          A <b>1:1 CV review</b> to sharpen how you present
+          your AI skills.
+        </li>
+
+        <li>
+          A <b>verifiable certificate</b> &mdash;
+          earned by passing a short final assessment
+          (you take it when ready).
+        </li>
+
+      </ul>
+      </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <h2>How it works</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Enroll</h3>
+        <p>Start within a day.</p>
+      </div>
+
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Learn</h3>
+        <p>1:1-guided modules.</p>
+      </div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Build</h3>
+        <p>Benchmark real workloads.</p>
+      </div>
+
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Get certified</h3>
+        <p>Pass the assessment.</p>
+      </div>
+
+      <div class="step">
+        <div class="num">5</div>
+        <h3>(Optional) Publish</h3>
+        <p>Author a paper on arXiv.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="pricing" style="background:#fafbfc">
+  <div class="wrap">
+
+    <h2>Choose your track</h2>
+
+    <p class="lead">
+      India pricing available at checkout.
+      Prices are introductory and adjustable.
+    </p>
+
+    <div class="price">
+
+      <div class="tier">
+
+        <h3>Essentials</h3>
+
+        <div class="amt">
+          $99
+          <small>/ one-time</small>
+        </div>
+
+        <ul>
+          <li>Full course (all modules)</li>
+          <li><b>Lifetime access</b></li>
+          <li>1:1 CV review</li>
+          <li>Certificate (after test)</li>
+          <li>Community access</li>
+        </ul>
+
+        <a class="cta"
+           href="LEMONSQUEEZY_ESSENTIALS_LINK">
+          Enroll &rarr;
+        </a>
+
+      </div>
+
+      <div class="tier best">
+
+        <span class="flag">Most popular</span>
+
+        <h3>Pro</h3>
+
+        <div class="amt">
+          <span class="was">$499</span>
+          $299
+          <small>/ one-time</small>
+        </div>
+
+        <ul>
+          <li>Everything in Essentials</li>
+          <li>Benchmarking lab + <b>code toolkit</b> (CV capstone)</li>
+          <li><b>3 months</b> 1:1 mentoring from an <b>industry AI engineer</b></li>
+          <li><b>Custom project</b> &mdash; idea, details &amp; approach provided (you build it)</li>
+          <li>Priority feedback</li>
+        </ul>
+
+        <a class="cta"
+           href="LEMONSQUEEZY_PRO_LINK">
+          Enroll &rarr;
+        </a>
+
+      </div>
+
+      <div class="tier">
+
+        <span class="flag top">Top 0.1%</span>
+
+        <h3>Author Track</h3>
+
+        <div class="amt">
+          <span class="was">$2,000</span>
+          $1,400
+          <small>/ one-time</small>
+        </div>
+
+        <p style="color:var(--ink2);font-size:13px;margin:0 0 12px;">
+          A career-defining boost &mdash; puts you in the
+          <b>top 0.1%</b> of the AI-engineer market.
+          Paper typically published within <b>~6 months</b>.
+        </p>
+<ul>
+    <li>Everything in Pro</li>
+    <li>A <b>completed AI project, released open-source</b> under your name</li>
+    <li>Guided <b>original research work or a short book</b></li>
+    <li>Published on <b>arXiv as the primary author</b></li>
+    <li>Your work <b>promoted to OpenGenius's audience</b> (110K+ readers)</li>
+    <li>Direct 1:1 mentorship throughout</li>
+</ul>
+
+<a class="cta" href="LEMONSQUEEZY_AUTHOR_LINK">Apply &rarr;</a>
+
+<p class="fin">
+    Refund policy: full refund available <b>before</b> access is granted &mdash;
+    changed your mind, no problem. Once access begins, the digital content and
+    1:1 services are non-refundable.
+</p>
+
+</div></section>
+</div>
+{{/post}}

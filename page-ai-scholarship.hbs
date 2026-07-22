@@ -1,0 +1,125 @@
+{{!< default}}
+{{!-- Custom page template. Create a Ghost Page with slug "ai-scholarship". --}}
+
+<style>
+.ogs{--ink:#1d1d1f; --ink2:#6e6e73; --hair:#e3e6ea; --surf:#f5f5f7; --acc:#3eb0ef; color:var(--ink); line-height:1.6;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; }
+.ogs a{ color:var(--acc); text-decoration:none; }
+.ogs .wrap{ max-width:920px; margin:0 auto; padding:0 24px; }
+.ogs .hero{ background:#1d1d1f; color:#fff; text-align:center; padding:70px 24px 58px; }
+.ogs .badge{ display:inline-block; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28); padding:5px 15px; border-radius:980px;
+font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; margin-bottom:22px; }
+.ogs .hero h1{ font-size:clamp(32px,6vw,54px); line-height:1.08; letter-spacing:-.022em; font-weight:700; margin:0 auto 14px; max-width:18ch; }
+.ogs .hero .sub{ color:#c7c9cc; font-size:clamp(16px,2.4vw,20px); max-width:58ch; margin:0 auto 26px; }
+.ogs .cta{ display:inline-block; background:var(--acc); color:#fff; font-weight:600; font-size:17px; padding:13px 28px; border-radius:10px; }
+.ogs .hero .limited{ color:#8ff0d5; font-weight:600; font-size:14px; margin-top:22px; }
+.ogs section{ padding:54px 0; }
+.ogs h2{ text-align:center; font-size:clamp(24px,3.4vw,32px); letter-spacing:-.02em; margin:0 0 12px; }
+.ogs .lead{ text-align:center; color:var(--ink2); max-width:60ch; margin:0 auto 32px; }
+.ogs .tracks{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.ogs .track{ border:1px solid var(--hair); border-radius:16px; padding:26px; }
+.ogs .track .ico{ font-size:26px; margin-bottom:8px; }
+.ogs .track h3{ margin:0 0 6px; font-size:19px; }
+.ogs .track p{ margin:0; color:var(--ink2); font-size:15px; }
+.ogs .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:820px; margin:0 auto; }
+.ogs .step .num{ width:34px; height:34px; border-radius:50%; background:#eaf6fe; color:var(--acc); font-weight:700; display:flex; align-items:center;
+justify-content:center; margin-bottom:12px; }
+.ogs .step h3{ margin:0 0 4px; font-size:16px; }
+.ogs .step p{ margin:0; color:var(--ink2); font-size:14px; }
+@media(max-width:760px){ .ogs .tracks,.ogs .steps{ grid-template-columns:1fr; } }
+</style>
+
+{{#post}}
+{{> "site-nav"}}
+
+<div class="ogs">
+  <header class="hero"><div class="wrap">
+    <span class="badge">&#127891; Limited Scholarships</span>
+    <h1>The OpenGenius AI Engineering Scholarships</h1>
+    <p class="sub">
+      Free access to the <b>Essentials track</b> of The AI Engineering Course
+      &mdash; for published researchers and driven beginners.
+    </p>
+    <a class="cta" href="https://x.com/OpenGenus" target="_blank" rel="noopener">
+      Apply on X &rarr;
+    </a>
+    <p class="limited">&#x1F552; Limited slots each month &middot; merit &amp; need based</p>
+  </div></header>
+
+  <section><div class="wrap">
+    <h2>Who can apply?</h2>
+    <p class="lead">
+      Two ways to qualify &mdash; pick the one that fits you.
+    </p>
+
+    <div class="tracks">
+
+      <div class="track">
+        <div class="ico">&#128196;</div>
+        <h3>Published researchers</h3>
+        <p>
+          Published a paper in <b>any field, any conference or journal</b>?
+          You've shown you can do rigorous work &mdash; get Essentials
+          <b>free</b>, with direct access</b>. Just share your paper link when you apply.</p>
+        </div>
+
+        <div class="track">
+            <div class="ico">&#128640;</div>
+            <h3>Driven beginners</h3>
+            <p>
+                New to AI and can't show a paper? Just tell us in
+                <b>one line why you want to master AI engineering</b>.
+                Selection is based on your motivation &mdash; show us your drive.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section style="background:#fafbfc"><div class="wrap">
+    <h2>How to apply</h2>
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="num">1</div>
+            <h3>Post on X</h3>
+            <p>
+                Tag <b>@OpenGenus</b> and include the text
+                <b>"Application to OpenGenus AI Scholarship"</b>
+                &mdash; with your <b>paper link</b> (researchers) or a
+                <b>one-line reason</b> why you want to master AI engineering
+                (beginners).
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="num">2</div>
+            <h3>We verify</h3>
+            <p>
+                We reply to your post and ask you to email us to confirm
+                your identity / paper.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="num">3</div>
+            <h3>Get access</h3>
+            <p>
+                Verified applicants receive <b>free Essentials access</b>
+                (limited slots each month).
+            </p>
+        </div>
+
+    </div>
+
+    <p class="lead" style="margin-top:28px;font-size:14px;">
+        In return, scholars share their learning journey publicly and a
+        short testimonial on completion &mdash; that's how we keep
+        scholarships free for the next batch.
+    </p>
+
+</div></section>
+
+</div>
+{{/post}}

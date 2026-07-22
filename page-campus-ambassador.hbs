@@ -1,0 +1,258 @@
+{{!< default}}
+{{!-- Custom page template. Create a Ghost Page with slug "ai-ambassador". --}}
+
+<style>
+.oga{
+  --ink:#1d1d1f;
+  --ink2:#6e6e73;
+  --hair:#e3e6ea;
+  --surf:#f5f5f7;
+  --acc:#3eb0ef;
+  color:var(--ink);
+  line-height:1.6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+.oga a{ color:var(--acc); text-decoration:none; }
+.oga .wrap{ max-width:960px; margin:0 auto; padding:0 24px; }
+.oga .hero{ background:#1d1d1f; color:#fff; text-align:center; padding:70px 24px 56px; }
+.oga .badge{
+  display:inline-block;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  padding:5px 15px;
+  border-radius:980px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+.oga .hero h1{
+  font-size:clamp(32px,6vw,54px);
+  line-height:1.08;
+  letter-spacing:-.022em;
+  font-weight:700;
+  margin:0 auto 14px;
+  max-width:18ch;
+}
+.oga .hero .sub{
+  color:#c7c9cc;
+  font-size:clamp(16px,2.4vw,20px);
+  max-width:60ch;
+  margin:0 auto 26px;
+}
+.oga .cta{
+  display:inline-block;
+  background:var(--acc);
+  color:#fff;
+  font-weight:600;
+  font-size:17px;
+  padding:13px 28px;
+  border-radius:10px;
+}
+.oga section{ padding:54px 0; }
+.oga h2{
+  text-align:center;
+  font-size:clamp(24px,3.4vw,32px);
+  letter-spacing:-.02em;
+  margin:0 0 12px;
+}
+.oga .lead{
+  text-align:center;
+  color:var(--ink2);
+  max-width:62ch;
+  margin:0 auto 32px;
+}
+.oga .cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.oga .card{
+  border:1px solid var(--hair);
+  border-radius:14px;
+  padding:22px;
+}
+.oga .card .ico{
+  font-size:24px;
+  margin-bottom:8px;
+}
+.oga .card h3{
+  margin:0 0 6px;
+  font-size:17px;
+}
+.oga .card p{
+  margin:0;
+  color:var(--ink2);
+  font-size:14px;
+}
+.oga .steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.oga .step .num{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#eaf6fe;
+  color:var(--acc);
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:10px;
+}
+.oga .step h3{ margin:0 0 3px; font-size:15px; }
+.oga .step p{ margin:0; color:var(--ink2); font-size:13px; }
+
+@media (max-width:820px){
+  .oga .cards,
+  .oga .steps{
+    grid-template-columns:1fr 1fr;
+  }
+}
+</style>
+
+{{#post}}
+{{> "site-nav"}}
+
+<div class="oga">
+
+<header class="hero">
+<div class="wrap">
+
+<span class="badge">&#127758; Campus Ambassadors</span>
+
+<h1>Bring OpenGenus AI to your campus</h1>
+
+<p class="sub">
+Help peers at your university learn AI engineering for free,
+connect us with your AI club, and earn rewards while building
+your own leadership record.
+</p>
+
+<a class="cta"
+   href="https://x.com/OpenGenus"
+   target="_blank"
+   rel="noopener">
+   Apply to be an ambassador &rarr;
+</a>
+
+</div>
+</header>
+
+<section>
+<div class="wrap">
+
+<h2>What ambassadors do</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="ico">&#129309;</div>
+<h3>Connect your AI club</h3>
+<p>
+Introduce us to your university's AI/CS club and help run a
+session or share our resources.
+</p>
+</div>
+
+<div class="card">
+<div class="ico">&#127891;</div>
+<h3>Help peers join free</h3>
+<p>
+Help interested students get free Essentials-track access
+(scholarships) so more people can learn.
+</p>
+</div>
+
+<div class="card">
+<div class="ico">&#11088;</div>
+<h3>Gather reviews</h3>
+<p>
+Collect honest reviews and testimonials from students who
+take the course.
+</p>
+</div></div></section>
+
+<section style="background:#fafbfc">
+  <div class="wrap">
+    <h2>What you earn</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="ico">&#11014;</div>
+        <h3>Course credits</h3>
+        <p>Earn credits toward the Pro or Author tiers as you hit milestones.</p>
+      </div>
+
+      <div class="card">
+        <div class="ico">&#128213;</div>
+        <h3>OpenGenus books</h3>
+        <p>Signed paperbacks from our 4.8★ catalog for active ambassadors.</p>
+      </div>
+
+      <div class="card">
+        <div class="ico">&#128184;</div>
+        <h3>Rewards / payment</h3>
+        <p>Top-performing ambassadors are rewarded with payment, plus a verifiable leadership certificate.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <h2>How to apply</h2>
+
+    <p class="lead">
+      We pick ambassadors who can genuinely rally their campus.
+    </p>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Record a 1-min video</h3>
+        <p>
+          Explain how you'll help your university's students using OpenGenus' AI resources (mention us).
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Post on X</h3>
+        <p>
+          Share it tagging <b>@OpenGenus</b> with
+          <b>"OpenGenus Campus Ambassador"</b>.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <h3>We review</h3>
+        <p>
+          We reply and ask you to email us to confirm your university details.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Get started</h3>
+        <p>
+          Selected ambassadors get an onboarding kit + resources to share.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+{{/post}}

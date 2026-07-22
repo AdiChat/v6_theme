@@ -1,0 +1,343 @@
+{{!< default}}
+{{!-- Custom page template. Create a Ghost Page with slug "ai-internship" to use this. --}}
+<style>
+.aii{
+  --ink:#1d1d1f;
+  --ink2:#6e6e73;
+  --hair:#e3e6ea;
+  --surf:#f5f5f7;
+  --acc:#3eb0ef;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--ink);
+  line-height:1.6
+}
+.aii a{color:var(--acc);text-decoration:none}
+.aii .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.aii-hero{
+  background:#1d1d1f;
+  color:#fff;
+  text-align:center;
+  padding:70px 24px 60px
+}
+.aii-badge{
+  display:inline-block;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.28);
+  padding:5px 15px;
+  border-radius:980px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  margin-bottom:24px
+}
+.aii-hero h1{
+  font-size:clamp(32px,6vw,56px);
+  line-height:1.08;
+  letter-spacing:-.022em;
+  font-weight:700;
+  margin:0 auto 16px;
+  max-width:18ch
+}
+.aii-hero .sub{
+  color:#c7c9cc;
+  font-size:clamp(16px,2.4vw,20px);
+  max-width:52ch;
+  margin:0 auto 28px
+}
+.aii-cta{
+  display:inline-block;
+  background:var(--acc);
+  color:#fff;
+  font-weight:600;
+  font-size:17px;
+  padding:13px 26px;
+  border-radius:10px
+}
+.aii-trust{
+  margin-top:30px;
+  color:#a9acb0;
+  font-size:14px;
+  display:flex;
+  gap:8px 20px;
+  justify-content:center;
+  flex-wrap:wrap
+}
+.aii-trust b{color:#fff}
+.aii section{padding:54px 0}
+.aii h2{
+  text-align:center;
+  font-size:clamp(24px,3.4vw,32px);
+  letter-spacing:-.02em;
+  margin:0 0 32px
+}
+.aii-cards,.aii-steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+.aii-card{
+  border:1px solid var(--hair);
+  border-radius:14px;
+  padding:24px
+}
+.aii-icon{
+  width:46px;
+  height:46px;
+  border-radius:12px;
+  background:#eaf6fe;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  margin-bottom:14px
+}
+.aii-card h3,.aii-step h3{
+  margin:0 0 6px;
+  font-size:18px
+}
+.aii-card p,.aii-step p{
+  margin:0;
+  color:var(--ink2);
+  font-size:15px
+}
+.aii-get{
+  max-width:640px;
+  margin:0 auto;
+  padding:0
+}
+.aii-get li{
+  list-style:none;
+  padding:9px 0 9px 34px;
+  position:relative
+}
+.aii-get li:before{
+  content:"\2713";
+  position:absolute;
+  left:0;
+  top:9px;
+  color:var(--acc);
+  font-weight:700
+}
+.aii-num{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#eaf6fe;
+  color:var(--acc);
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:12px
+}
+.aii-callout{
+  background:var(--surf);
+  border:1px solid var(--hair);
+  border-radius:16px;
+  padding:28px 30px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  flex-wrap:wrap
+}
+.aii-callout h3{
+  margin:0 0 4px;
+  font-size:20px
+}
+.aii-callout p{
+  margin:0;
+  color:var(--ink2);
+  max-width:60ch
+}
+.aii-cta2{
+  margin-left:auto;
+  border:1px solid var(--acc);
+  color:var(--acc);
+  padding:10px 20px;
+  border-radius:10px;
+  font-weight:600
+}
+.aii-note{
+  text-align:center;
+  color:var(--ink2);
+  font-size:14px;
+  max-width:60ch;
+  margin:22px auto 0
+}
+@media(max-width:720px){
+  .aii-cards,.aii-steps{grid-template-columns:1fr}
+  .aii-cta2{margin-left:0}
+}
+</style>
+
+{{#post}}
+<div class="aii">
+
+  {{> "site-nav"}}
+
+  <header class="aii-hero">
+    <div class="wrap">
+      <span class="aii-badge">&#127894; Since 2017 &middot; 1,020+ Citations</span>
+
+      <h1>
+        OpenGenus AI Research &amp; Engineering<br>
+        Internship <span id="aii-yr">2026</span>
+      </h1>
+
+      <p class="sub">
+        Build a real AI/ML portfolio with a 9-year-old open-source Computer Science publication,
+        cited by 1,000+ research papers.
+      </p>
+
+      <a class="aii-cta"
+         href="https://discourse.opengenus.org/t/internship-guidelines-at-opengenus/2335"
+         target="_blank"
+         rel="noopener">
+         Apply now &rarr;
+      </a>
+
+      <div class="aii-trust">
+        <span><b>2,500+</b> contributors</span>
+        <span>&middot;</span>
+        <span><b>13.7K&#9733;</b> open source</span>
+        <span>&middot;</span>
+        <span><b>54</b> books published</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2>What you'll work on</h2>
+
+      <div class="aii-cards">
+
+        <div class="aii-card">
+          <div class="aii-ico">&#128300;</div>
+          <h3>Review &amp; brainstorm</h3>
+          <p>
+            Read and review recent AI/ML research papers and brainstorm ideas,
+            approaches, and improvements with the team.
+          </p>
+        </div>
+
+        <div class="aii-card">
+          <div class="aii-ico">&#8981;</div>
+          <h3>Run &amp; benchmark</h3>
+          <p>
+            Experiment with and benchmark real AI workloads (LLMs, performance)
+            on a live server.
+          </p>
+        </div>
+
+        <div class="aii-card">
+          <div class="aii-ico">&#127760;</div>
+          <h3>Open-source impact</h3>
+          <p>
+            Contribute to open-source datasets and tools used by thousands worldwide.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fafbfc">
+    <div class="wrap">
+
+      <h2>What you get</h2>
+
+      <ul class="aii-get">
+        <li>
+          A verifiable <b>credential</b> and public work associated with your name.
+        </li>
+        <li>
+          Real-world <b>AI/ML research &amp; engineering experience</b>.
+        </li>
+        <li>
+          <b>Mentorship</b> and a growth path:
+          Intern &rarr; Mentor &rarr; Author &rarr; arXiv paper co-author.
+        </li>
+        <li>
+          A <b>direct pathway into our AI/ML interview-prep cohort</b>
+          (free/discounted access; top interns become mentors).
+        </li>
+        <li>
+          A <b>Certificate of Completion</b>.
+        </li>
+      </ul>
+
+      <p class="aii-note">
+        This is an unpaid, remote, merit-based program open to all backgrounds.
+        The reward is credentials, real         experience, and career acceleration.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>How selection works</h2>
+
+        <div class="aii-steps">
+
+          <div class="aii-step">
+            <div class="aii-num">1</div>
+            <h3>Solve the sheet</h3>
+            <p>Grab the current problem sheet and solve it.</p>
+          </div>
+
+          <div class="aii-step">
+            <div class="aii-num">2</div>
+            <h3>Post on X</h3>
+            <p>
+              Post your solution publicly on X, tagging
+              <b>@OpenGenus</b> with <b>#OpenGenusAI</b>.
+            </p>
+          </div>
+
+          <div class="aii-step">
+            <div class="aii-num">3</div>
+            <h3>Share &amp; get reviewed</h3>
+            <p>
+              Drop your X-post link in our Discourse thread.
+              Selected candidates are invited to onboard.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+
+        <div class="aii-callout">
+          <span style="font-size:34px">&#127891;</span>
+
+          <div>
+            <h3>Ready to apply?</h3>
+            <p>
+              Get the current problem sheet, post your solution on X,
+              and share it on our Discourse thread.
+              Top interns also join and support our AI cohort.
+            </p>
+          </div>
+
+          <a class="aii-cta2"
+             href="https://discourse.opengenus.org/t/internship-guidelines-at-opengenus/2335"
+             target="_blank"
+             rel="noopener">
+             Apply on Discourse &rarr;
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+{{/post}}
+
+<script>
+document.getElementById('aii-yr').textContent = new Date().getFullYear();
+</script>
