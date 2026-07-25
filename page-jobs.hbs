@@ -1,0 +1,408 @@
+{{!< default}}
+
+{{!-- Custom page template. Create a Ghost Page with slug "ai-jobs".
+    Renders /assets/jobs.json (produced by jobs_aggregator.py). Put jobs.json in the
+    theme's assets/ folder so it is served at /assets/jobs.json. --}}
+
+<style>
+.ogj{
+  --ink:#1d1d1f;
+  --ink2:#6e6e73;
+  --hair:#e3e6ea;
+  --surf:#f5f5f7;
+  --acc:#3eb0ef;
+  color:var(--ink);
+  line-height:1.6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+.ogj a{
+  color:var(--acc);
+  text-decoration:none;
+}
+
+.ogj .wrap{
+  max-width:880px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+.ogj .hero{
+  background:#1d1d1f;
+  color:#fff;
+  text-align:center;
+  padding:64px 24px 52px;
+}
+
+.ogj .hero h1{
+  font-size:clamp(30px,6vw,50px);
+  line-height:1.08;
+  letter-spacing:-.022em;
+  font-weight:700;
+  margin:0 auto 12px;
+  max-width:20ch;
+}
+
+.ogj .hero .sub{
+  color:#c7c9cc;
+  font-size:clamp(15px,2.2vw,19px);
+  max-width:58ch;
+  margin:0 auto 8px;
+}
+
+.ogj .hero .upd{
+  color:#8a8d91;
+  font-size:13px;
+  margin-top:12px;
+}
+
+.ogj .hero .list-cta{
+  display:inline-block;
+  margin-top:20px;
+  background:var(--acc);
+  color:#fff;
+  font-weight:600;
+  padding:11px 22px;
+  border-radius:10px;
+}
+
+.ogj section{
+  padding:40px 0;
+}
+
+.ogj h2{
+  font-size:20px;
+  letter-spacing:-.01em;
+  margin:0 0 14px;
+}
+
+.ogj .filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.ogj .filters input,
+.ogj .filters select{
+  font:inherit;
+  padding:9px 12px;
+  border:1px solid var(--hair);
+  border-radius:9px;
+  background:#fff;
+  color:var(--ink);
+}
+
+.ogj .filters input{
+  flex:1;
+  min-width:200px;
+}
+
+.ogj .filters .clear{
+  background:var(--surf);
+  border:1px solid var(--hair);
+  color:var(--ink2);
+  cursor:pointer;
+}
+
+.ogj .job{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  border:1px solid var(--hair);
+  border-radius:12px;
+  padding:14px 18px;
+  margin-bottom:10px;
+}
+
+.ogj .job span{
+  border-color:var(--acc);
+  background:#f5fbff;
+}
+
+.ogj .job .co{
+  font-weight:700;
+  min-width:120px;
+}
+
+.ogj .job .ti{
+  flex:1;
+}
+
+.ogj .job .ti small{
+  display:block;
+  color:var(--ink2);
+  font-size:13px;
+}
+
+.ogj .job .ti .tag{
+  display:inline-block;
+  font-size:11px;
+  color:var(--ink2);
+  background:var(--surf);
+  border:1px solid var(--hair);
+  border-radius:980px;
+  padding:1px 9px;
+  margin-left:6px;
+}
+
+.ogj .job .tag.pick{
+  color:#b25e00;
+  background:#fff6e9;
+  border-color:#f0d9b5;
+  font-weight:700;
+}
+
+.ogj .badge{
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:#fff;
+  background:var(--acc);
+  border-radius:980px;
+  padding:2px 9px;
+}
+
+.ogj .apply{
+  border:1px solid var(--acc);
+  color:var(--acc);
+  padding:8px 16px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:14px;
+  white-space:nowrap;
+}
+
+.ogj .more{
+  display:block;
+  margin:6px auto 0;
+  background:#fff;
+  border:1px solid var(--acc);
+  color:var(--acc);
+  font:inherit;
+  font-weight:600;
+  padding:10px 24px;
+  border-radius:9px;
+  cursor:pointer;
+}
+
+.ogj .muted{
+  color:var(--ink2);
+}
+
+@media(max-width:640px){
+  .ogj .job{
+    flex-wrap:wrap;
+  }
+  .ogj .job .co{
+    min-width:0;
+  }
+}
+</style>
+
+{{#post}}
+{{> "site-nav"}}
+
+<div class="ogj">
+  <header class="hero">
+    <div class="wrap">
+    <h1>AI Engineering Jobs</h1>
+<p class="sub">Hand-selected premium AI-engineer roles from the best AI companies — refreshed regularly by OpenGenus.</p>
+<p class="upd" id="ogj-updated"></p>
+<a class="list-cta" href="mailto:team@opengenus.org?subject=A%20Wonderful%20AI%20role%20to%20add">Know a wonderful role? Tell us →</a>
+</div></header>
+
+<section><div class="wrap">
+    <div id="ogj-sponsored"></div>
+    <h2 id="ogj-heading">Open roles</h2>
+
+    <div class="filters">
+        <input id="ogj-q" type="search" placeholder="Search title or company…">
+        <select id="ogj-company"></select>
+        <select id="ogj-level"></select>
+        <select id="ogj-domain"></select>
+        <select id="ogj-country"></select>
+        <button class="clear" id="ogj-clear">Clear</button>
+    </div>
+
+    <div id="ogj-list"><p class="muted">Loading roles…</p></div>
+    <button class="more" id="ogj-more" style="display:none">Load more</button>
+</div></section>
+
+</div>
+
+<script>
+(function(){
+
+var PAGE = 15;
+var LEVEL_ORDER = ["Intern","Junior","Mid","Senior","Staff","Principal","Lead","Manager"];
+var ALL = [];
+var state = { q:"", company:"", level:"", domain:"", country:"", shown:PAGE };
+var $ = function(id){ return document.getElementById(id); };
+
+function card(j, spon){
+    var tags = "";
+    if(j.domain) tags += '<span class="tag">'+j.domain+'</span>';
+    if(j.level) tags += '<span class="tag">'+j.level+'</span>';
+    if(j.pick) tags += '<span class="tag pick">★ Pick</span>';
+
+    var loc = (j.location || tags)
+        ? '<small>' + (j.location || "") + tags + '</small>'
+        : "";
+
+    var badge = spon
+        ? '<span class="badge">Sponsored</span>'
+        : "";
+
+    return '<div class="job'+(spon? ' spon':'')+'">' +
+        '<div class="co">'+badge+(j.company||'')+'</div>' +
+        '<div class="ti">'+(j.title||'')+loc+'</div>' +
+        '<a class="apply" href="'+(j.url||'#')+'" target="_blank" rel="noopener">View ↗</a></div>';
+}
+
+function uniq(key){
+    var s = {};
+    ALL.forEach(function(j){
+        if(j[key]) s[j[key]] = 1;
+    });
+    return Object.keys(s).sort();
+}
+
+function fillSelect(el, label, vals){
+    el.innerHTML = '<option value="">' + label + '</option>' +
+        vals.map(function(v){ return '<option value="' + v + '">' + v + '</option>'; }).join('');
+}
+
+function fillLevels(el){
+    var present = uniq("level");
+    fillSelect(el, "All levels", LEVEL_ORDER.filter(function(l){ return present.indexOf(l) >= 0; }));
+}
+
+// round-robin by company so no single company dominates the top of the list
+function interleave(jobs){
+    var by = {}, order = [];
+    jobs.forEach(function(j){
+        if(!by[j.company]){
+            by[j.company] = [];
+            order.push(j.company);
+        }
+        by[j.company].push(j);
+    });
+
+    var out = [], added = true;
+    while(added){
+        added = false;
+        order.forEach(function(c){
+            if(by[c].length){
+                out.push(by[c].shift());
+                added = true;
+            }
+        });
+    }
+    return out;
+}
+
+function filtered(){
+    var q = state.q.toLowerCase();
+    return ALL.filter(function(j){
+        if(state.company && j.company !== state.company) return false;
+        if(state.level && j.level !== state.level) return false;
+        if(state.domain && j.domain !== state.domain) return false;
+        if(state.country && j.country !== state.country) return false;
+        if(q &&
+           (j.title || "").toLowerCase().indexOf(q) < 0 &&
+           (j.company || "").toLowerCase().indexOf(q) < 0)
+            return false;
+        return true;
+    });
+}
+
+function render(){
+    var res = interleave(filtered());
+    var slice = res.slice(0, state.shown);
+
+    $("ogj-heading").textContent = "Open roles (" + res.length + ")";
+    $("ogj-list").innerHTML = res.length
+        ? slice.map(function(j){ return card(j, false); }).join("")
+        : '<p class="muted">No roles match – try clearing filters.</p>';
+
+    $("ogj-more").style.display =
+        res.length > state.shown ? "block" : "none";
+}
+
+function onSel(id, key){
+    $(id).addEventListener("change", function(e){
+        state[key] = e.target.value;
+        state.shown = PAGE;
+        render();
+    });
+}
+
+fetch('/assets/jobs.json?t=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+        if(d.updated){
+            $("ogj-updated").textContent =
+                "Last updated: " + d.updated;
+        }
+
+        var spon = d.sponsored || [];
+        if(spon.length){
+            $("ogj-sponsored").innerHTML =
+                "<h2>Featured</h2>" +
+                spon.map(function(j){ return card(j, true); }).join("");
+        }
+
+        ALL = d.jobs || [];
+fillSelect($("ogj-company"), "All companies", uniq("company"));
+fillLevels($("ogj-level"));
+fillSelect($("ogj-domain"), "All domains", uniq("domain"));
+fillSelect($("ogj-country"), "All locations", uniq("country"));
+
+var t;
+$("ogj-q").addEventListener("input", function(e){   // debounced: cheap even with thousands of roles
+    clearTimeout(t);
+    var v = e.target.value;
+    t = setTimeout(function(){
+        state.q = v;
+        state.shown = PAGE;
+        render();
+    }, 150);
+});
+
+onSel("ogj-company","company");
+onSel("ogj-level","level");
+onSel("ogj-domain","domain");
+onSel("ogj-country","country");
+
+$("ogj-more").addEventListener("click", function(){
+    state.shown += PAGE;
+    render();
+});
+
+$("ogj-clear").addEventListener("click", function(){
+    state = {
+        q:"",
+        company:"",
+        level:"",
+        domain:"",
+        country:"",
+        shown: PAGE
+    };
+    $("ogj-q").value = "";
+    $("ogj-company").value = "";
+    $("ogj-level").value = "";
+    $("ogj-domain").value = "";
+    $("ogj-country").value = "";
+    render();
+});
+
+render();
+}).catch(function(){
+    $("ogj-list").innerHTML =
+        '<p class="muted">Job list is being updated. Please check back shortly.</p>';
+});
+})();
+</script>
+{{/post}}
