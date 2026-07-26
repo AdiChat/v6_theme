@@ -1,0 +1,70 @@
+Global AI race	12
+[CHEATSHEET] System-level Inference Serving Optimization	14
+[CHEATSHEET] GPU kernel design for Deep Learning	21
+[Calculate] LLM memory calculations	23
+[Calculate] Communication and compute overhead	29
+[Calculate] FLOPs needed to train GPT-3	31
+INT8 Quantization	40
+System-Level Parallelism & Scaling [AI workload]	48
+Lifecycle Aware Performance	50
+LLM Inference	52
+Layerwise timing of LLM	55
+Chunked Prefill	57
+Decode-Maximal Batching	59
+Continuous Batching	61
+P/D disaggregation	64
+Collective Communication primitives	65
+Memory components in LLM	71
+5D Parallelism	73
+Data Parallelism [DP]	75
+ZeRO parallelization	77
+Tensor Parallelism [TP]	82
+Sequence Parallelism [SP]	86
+Context Parallelism [CP]	89
+Pipeline Parallelism [PP]	92
+Expert Parallelism [EP]	95
+Bandwidth limitations	96
+ADD	99
+Attention [2017]	100
+FlexAttention	105
+GPU Workload Parallelization	106
+CPU architecture (for parallel workload)	131
+DL Software Stack	133
+DL breakthroughs Timeline	135
+Deep Learning model list [Applications]	136
+Training & Inference time of DL models	146
+Linear Regression	149
+Logistic Regression [todo]	152
+Perceptron [1943]	153
+Linear layer (nn.linear)	155
+Perceptron with step function	156
+Single Layer Neural Network	160
+Multi-Layer Perception (MLP) / Neural Network [1958]	162
+RNN & LSTM [1982, 1997]	167
+Transformer Neural Network [2017]	171
+BERT [2018]	176
+LLM [2018]	180
+Performance metrics	182
+AlexNet [2011]	185
+ResNet50 [2015]	187
+Training your model	190
+Inference	192
+Datatypes (dtype) in Deep Learning	193
+FP32 IEEE754 Floating Point	197
+Emulate FP64 using FP32	201
+FP8 in DL	206
+Hardware platforms for Deep Learning	207
+Accuracy	209
+Loss	212
+Loss landscape	216
+Gradient descent	217
+Backpropagation [1975]	218
+Preparing dataset for training	219
+Bias Variance	220
+Activation Functions	222
+MaxPool and AvgPool	224
+Fully Connected Layer (FC)	226
+Dropout [1990]	227
+Regularization techniques	228
+Other core DL operations	231
+Convolution Neural Network (CNN) [1995]	232
