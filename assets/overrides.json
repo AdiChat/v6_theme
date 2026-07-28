@@ -1,0 +1,272 @@
+{
+  {
+    "__README__": "Human-maintained curation layer merged by conferences_aggregator.py on top of the auto-fetched ai-deadlines data. price_map/tier_map/metrics_map are keyed by conference ACRONYM (case-insensitive, = name without the trailing year). 'add' = full conference objects the academic dataset omits (regional + industry safety-net venues). 'featured' = the highlighted slot. 'hide' = acronyms to drop. Prices, acceptance rates and h5-index are ILLUSTRATIVE -- verify against official stats / Google Scholar Metrics before publishing. Difficulty is derived on the page from accept_rate (else tier), so it needs no field here.",
+
+    "metrics_map": {
+      "NEURIPS": {"accept_rate": 0.26, "h5": 337},
+      "ICML": {"accept_rate": 0.27, "h5": 268},
+      "ICLR": {"accept_rate": 0.31, "h5": 304},
+      "CVPR": {"accept_rate": 0.23, "h5": 422},
+      "ICCV": {"accept_rate": 0.26, "h5": 239},
+      "ECCV": {"accept_rate": 0.28, "h5": 176},
+      "AAAI": {"accept_rate": 0.23, "h5": 180},
+      "IJCAI": {"accept_rate": 0.14, "h5": 130},
+      "ACL": {"accept_rate": 0.21, "h5": 200},
+      "EMNLP": {"accept_rate": 0.23, "h5": 155},
+      "NAACL": {"accept_rate": 0.26, "h5": 132},
+      "EACL": {"accept_rate": 0.25, "h5": 66},
+      "COLM": {"accept_rate": 0.30, "h5": null},
+      "KDD": {"accept_rate": 0.14, "h5": 145},
+      "SIGIR": {"accept_rate": 0.20, "h5": 105},
+      "WWW": {"accept_rate": 0.20, "h5": 120},
+      "WSDM": {"accept_rate": 0.17, "h5": 82},
+      "CIKM": {"accept_rate": 0.21, "h5": 84},
+      "RECSYS": {"accept_rate": 0.20, "h5": 68},
+      "ICDM": {"accept_rate": 0.20, "h5": 70},
+      "SDM": {"accept_rate": 0.25, "h5": 45},
+      "PAKDD": {"accept_rate": 0.25, "h5": 43},
+      "ECML-PKDD": {"accept_rate": 0.25, "h5": 60},
+      "MLSYS": {"accept_rate": 0.20, "h5": 40},
+      "AISTATS": {"accept_rate": 0.29, "h5": 70},
+      "UAI": {"accept_rate": 0.31, "h5": 55},
+      "COLT": {"accept_rate": 0.33, "h5": 44},
+      "AAMAS": {"accept_rate": 0.24, "h5": 56},
+      "FACCT": {"accept_rate": 0.25, "h5": 60},
+      "KR": {"accept_rate": 0.30, "h5": 34},
+      "LADC": {"accept_rate": 0.30, "h5": 25},
+      "AUTOML": {"accept_rate": 0.35, "h5": 20},
+      "ICRA": {"accept_rate": 0.43, "h5": 150},
+      "IROS": {"accept_rate": 0.46, "h5": 111},
+      "CORL": {"accept_rate": 0.30, "h5": 52},
+      "ICASSP": {"accept_rate": 0.48, "h5": 141},
+      "INTERSPEECH": {"accept_rate": 0.48, "h5": 108},
+      "MICCAI": {"accept_rate": 0.31, "h5": 110},
+      "SIGGRAPH": {"accept_rate": 0.20, "h5": 121},
+      "ACM MM": {"accept_rate": 0.28, "h5": 91},
+      "ICME": {"accept_rate": 0.30, "h5": 47},
+      "WACV": {"accept_rate": 0.38, "h5": 79},
+      "BMVC": {"accept_rate": 0.30, "h5": 55},
+            "ACCV": {"accept_rate": 0.30, "h5": 33},
+      "ICPR": {"accept_rate": 0.42, "h5": 55},
+      "ACML": {"accept_rate": 0.30, "h5": 26},
+      "PRICAI": {"accept_rate": 0.35, "h5": 25},
+      "IJCNN": {"accept_rate": 0.55, "h5": 55},
+      "ICANN": {"accept_rate": 0.50, "h5": 34},
+      "ICONIP": {"accept_rate": 0.45, "h5": 30},
+      "DSAA": {"accept_rate": 0.30, "h5": 28},
+      "AACL-IJCNLP": {"accept_rate": 0.30, "h5": 30},
+      "CONLL": {"accept_rate": 0.30, "h5": 45}
+    },
+
+    "price_map": {
+      "NEURIPS": {"price": 900, "price_note": "Student + virtual rates lower"},
+      "ICML": {"price": 700, "price_note": "Student + virtual rates lower"},
+      "ICLR": {"price": 650, "price_note": "Student + virtual rates lower"},
+      "CVPR": {"price": 800, "price_note": "Student rate ~$400"},
+      "ICCV": {"price": 800, "price_note": "Student rate ~$400"},
+      "ECCV": {"price": 800, "price_note": "Student rate ~$400"},
+      "ACL": {"price": 650, "price_note": "Student rate ~$350"},
+      "EMNLP": {"price": 650, "price_note": "Student rate ~$350"},
+      "NAACL": {"price": 600, "price_note": "Student rate ~$300"},
+      "EACL": {"price": 600, "price_note": "Student rate ~$300"},
+      "COLM": {"price": 550, "price_note": "Student rate ~$300"},
+      "AAAI": {"price": 750, "price_note": "Student rate ~$350"},
+      "IJCAI": {"price": 700, "price_note": "Student rate ~$350"},
+      "ECAI": {"price": 600, "price_note": "Student rate ~$300"},
+      "KDD": {"price": 850, "price_note": "Student rate ~$450"},
+      "SIGIR": {"price": 750, "price_note": "Student rate ~$400"},
+      "WWW": {"price": 700, "price_note": "Student rate ~$350"},
+      "WSDM": {"price": 500, "price_note": "Student rate ~$250"},
+      "CIKM": {"price": 650, "price_note": "Student rate ~$350"},
+      "RECSYS": {"price": 650, "price_note": "Student rate ~$350"},
+      "ICDM": {"price": 600, "price_note": "Student rate ~$350"},
+      "SDM": {"price": 500, "price_note": "Student rate ~$250"},
+      "PAKDD": {"price": 450, "price_note": "Student rate ~$250"},
+      "MLSYS": {"price": 700, "price_note": "Student rate ~$300"},
+      "AISTATS": {"price": 600, "price_note": "Student rate ~$300"},
+      "UAI": {"price": 550, "price_note": "Student rate ~$300"},
+      "COLT": {"price": 550, "price_note": "Student rate ~$300"},
+      "AAMAS": {"price": 600, "price_note": "Student rate ~$300"},
+      "FACCT": {"price": 500, "price_note": "Student rate ~$250"},
+      "KR": {"price": 500, "price_note": "Student rate ~$300"},
+      "RLC": {"price": 500, "price_note": "Student rate ~$300"},
+      "LADC": {"price": 450, "price_note": "Student rate ~$250"},
+      "AUTOML": {"price": 450, "price_note": "Student rate ~$250"},
+      "ICRA": {"price": 750, "price_note": "Student rate ~$400"},
+      "IROS": {"price": 700, "price_note": "Student rate ~$400"},
+      "CORL": {"price": 550, "price_note": "Student rate ~$300"},
+      "ICASSP": {"price": 700, "price_note": "Student rate ~$350"},
+            "INTERSPEECH": {"price": 750, "price_note": "Student rate ~$400"},
+      "MICCAI": {"price": 700, "price_note": "Student rate ~$400"},
+      "SIGGRAPH": {"price": 1100, "price_note": "Full conference; day passes cheaper"},
+      "ACMMM": {"price": 650, "price_note": "Student rate ~$350"},
+      "ICME": {"price": 550, "price_note": "Student rate ~$300"},
+      "WACV": {"price": 600, "price_note": "Student rate ~$300"},
+      "BMVC": {"price": 450, "price_note": "Student rate ~$250"},
+      "ACCV": {"price": 500, "price_note": "Student rate ~$300"},
+      "ICPR": {"price": 550, "price_note": "Student rate ~$300"},
+      "ACML": {"price": 450, "price_note": "Student rate ~$250"},
+      "PRICAI": {"price": 450, "price_note": "Student rate ~$250"},
+      "IJCNN": {"price": 550, "price_note": "Student rate ~$300"},
+      "ICANN": {"price": 500, "price_note": "Student rate ~$300"},
+      "ICONIP": {"price": 450, "price_note": "Student rate ~$250"},
+      "DSAA": {"price": 450, "price_note": "Student rate ~$250"},
+      "AACL": {"price": 450, "price_note": "Student rate ~$250"},
+      "CONLL": {"price": 400, "price_note": "Co-located with EMNLP"},
+      "ECML-PKDD": {"price": 600, "price_note": "Student rate ~$300"},
+      "ECMLPKDD": {"price": 600, "price_note": "Student rate ~$300"}
+    },
+
+    "tier_map": {
+      "COLM": "A",
+      "RLC": "A"
+    },
+
+    "hide": [],
+
+    "featured": [
+      {
+        "name": "AI Engineer World's Fair",
+        "full": "The AI Engineer World's Fair 2027",
+        "topic": "AI Engineering",
+        "tier": "Industry",
+        "start": "2027-06-15",
+        "end": "2027-06-17",
+        "city": "San Francisco",
+        "country": "USA",
+        "mode": "In-person",
+        "deadline": "2027-02-01",
+        "deadline_type": "CFP",
+        "price": 1499,
+        "price_note": "Early-bird from $899",
+        "url": "https://www.ai.engineer/"
+      }
+    ],
+
+    "add": [
+      {
+        "name": "CODS-COMAD 2026",
+        "full": "ACM India Joint Int'l Conference on Data Science & Management of Data",
+        "topic": "Data Mining",
+        "tier": "Regional",
+        "start": "2026-12-17",
+        "end": "2026-12-20",
+        "city": "Chennai",
+        "country": "India",
+        "mode": "In-person",
+        "deadline": "2026-08-30",
+        "deadline_type": "Paper",
+        "price": 250,
+        "price_note": "Student rate ~$120",
+        "url": "https://cods-comad.in/"
+      },
+      {
+        "name": "ALTA 2026",
+        "full": "Australasian Language Technology Association Workshop",
+        "topic": "LLM / NLP",
+        "tier": "Regional",
+        "start": "2026-12-02",
+        "end": "2026-12-04",
+        "city": "Melbourne",
+        "country": "Australia",
+        "mode": "In-person",
+        "deadline": "2026-08-25",
+        "deadline_type": "Paper",
+        "price": 300,
+        "price_note": "Student rate ~$150",
+        "url": "https://www.alta.asn.au/"
+      },
+      {
+        "name": "ESANN 2027",
+        "full": "European Symposium on Artificial Neural Networks",
+        "topic": "ML (general)",
+        "tier": "Regional",
+        "start": "2027-04-21",
+        "end": "2027-04-23",
+        "city": "Bruges",
+        "country": "Belgium",
+        "mode": "In-person",
+        "deadline": "2026-11-07",
+        "deadline_type": "Paper",
+        "price": 500,
+        "price_note": "Student rate ~$300"
+      },
+      {
+        "name": "NLPCC 2026",
+        "full": "CCF Int'l Conference on NLP and Chinese Computing",
+        "topic": "LLM / NLP",
+        "tier": "Regional",
+        "start": "2026-10-16",
+        "end": "2026-10-18",
+        "city": "Chengdu",
+        "country": "China",
+        "mode": "In-person",
+        "deadline": null,
+        "deadline_type": null,
+        "price": 400,
+        "price_note": "Student rate ~$200",
+        "url": "http://tcci.ccf.org.cn/conference/2026/"
+      },
+      {
+        "name": "BRACIS 2026",
+        "full": "Brazilian Conference on Intelligent Systems",
+        "topic": "ML (general)",
+        "tier": "Regional",
+        "start": "2026-11-16",
+        "end": "2026-11-20",
+        "city": "Recife",
+        "country": "Brazil",
+        "mode": "In-person",
+        "deadline": null,
+        "deadline_type": null,
+        "price": 250,
+        "price_note": "Student rate ~$120",
+        "url": "https://bracis.sbc.org.br/"
+      }
+      {"name": "Deep Learning Indaba 2026", "full": "Deep Learning Indaba - African ML Community", "topic": "ML (general)", "tier": "Workshop", "start": "2026-08-23", "end":
+"2026-08-29", "city": "Kigali", "country": "Rwanda", "mode": "In-person", "deadline": null, "deadline_type": "Application", "price": null, "price_note": "Application +
+scholarships; fees vary", "url": "https://deeplearningindaba.com/"},
+
+{"name": "Khipu 2027", "full": "Khipu - Latin American Meeting in AI", "topic": "ML (general)", "tier": "Workshop", "start": "2027-03-08", "end": "2027-03-13", "city":
+"Santiago", "country": "Chile", "mode": "In-person", "deadline": "2026-11-15", "deadline_type": "Application", "price": 0, "price_note": "Application-based;
+scholarships available", "url": "https://khipu.ai/"},
+
+{"name": "AMLD 2027", "full": "Applied Machine Learning Days", "topic": "AI Engineering", "tier": "Regional", "start": "2027-02-06", "end": "2027-02-09", "city":
+"Lausanne", "country": "Switzerland", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 500, "price_note": "Student rate lower", "url":
+"https://www.appliedmldays.org/"},
+
+{"name": "GTC 2027", "full": "NVIDIA GPU Technology Conference", "topic": "Systems / MLSys", "tier": "Industry", "start": "2027-03-22", "end": "2027-03-26", "city":
+"San Jose", "country": "USA", "mode": "Hybrid", "deadline": "2026-10-15", "deadline_type": "CFP (talks)", "price": 1200, "price_note": "Virtual attendance free", "url":
+"https://www.nvidia.com/gtc/"},
+
+{"name": "PyTorch Conf 2026", "full": "PyTorch Conference", "topic": "AI Engineering", "tier": "Industry", "start": "2026-10-22", "end": "2026-10-23", "city": "San
+Francisco", "country": "USA", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 550, "price_note": "Student / academic discounts", "url":
+"https://events.linuxfoundation.org/pytorch-conference/"},
+
+{"name": "Ray Summit 2026", "full": "Ray Summit (Anyscale)", "topic": "Systems / MLSys", "tier": "Industry", "start": "2026-09-30", "end": "2026-10-01", "city": "San
+Francisco", "country": "USA", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 800, "price_note": "Early-bird cheaper", "url":
+"https://www.anyscale.com/ray-summit"},
+
+{"name": "Data+AI Summit 2027", "full": "Databricks Data + AI Summit", "topic": "Data Mining", "tier": "Industry", "start": "2027-06-14", "end": "2027-06-17", "city":
+"San Francisco", "country": "USA", "mode": "Hybrid", "deadline": "2027-01-15", "deadline_type": "CFP (talks)", "price": 1795, "price_note": "Virtual free; in-person
+paid", "url": "https://www.databricks.com/dataaisummit"},
+
+{"name": "MLOps World 2026", "full": "MLOps World / Generative AI World Summit", "topic": "AI Engineering", "tier": "Industry", "start": "2026-11-05", "end":
+"2026-11-06", "city": "Austin", "country": "USA", "mode": "Hybrid", "deadline": null, "deadline_type": null, "price": 500, "price_note": "Virtual pass cheaper", "url":
+"https://mlopsworld.com/"},
+
+{"name": "QCon AI 2026", "full": "QCon AI - Software Engineering for AI", "topic": "AI Engineering", "tier": "Industry", "start": "2026-12-16", "end": "2026-12-17", "city":
+"New York", "country": "USA", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 1400, "price_note": "Team discounts available", "url":
+"https://qconferences.com/"},
+
+{"name": "World Summit AI 2026", "full": "World Summit AI", "topic": "AI Engineering", "tier": "Industry", "start": "2026-10-14", "end": "2026-10-15", "city":
+"Amsterdam", "country": "Netherlands", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 1500, "price_note": "Startup / academic discounts", "url":
+"https://worldsummit.ai/"},
+
+{"name": "ODSC West 2026", "full": "Open Data Science Conference West", "topic": "AI Engineering", "tier": "Industry", "start": "2026-11-03", "end": "2026-11-05",
+"city": "San Francisco", "country": "USA", "mode": "Hybrid", "deadline": null, "deadline_type": null, "price": 1200, "price_note": "Virtual pass cheaper", "url":
+"https://odsc.com/"},
+
+{"name": "The AI Summit London 2027", "full": "The AI Summit London", "topic": "AI Engineering", "tier": "Industry", "start": "2027-06-09", "end": "2027-06-10", "city":
+"London", "country": "UK", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 1800, "price_note": "Multiple pass tiers", "url":
+"https://london.theaisummit.com/"}
