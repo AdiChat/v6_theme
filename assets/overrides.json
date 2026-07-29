@@ -1,6 +1,4 @@
-{
-  {
-    "__README__": "Human-maintained curation layer merged by conferences_aggregator.py on top of the auto-fetched ai-deadlines data. price_map/tier_map/metrics_map are keyed by conference ACRONYM (case-insensitive, = name without the trailing year). 'add' = full conference objects the academic dataset omits (regional + industry safety-net venues). 'featured' = the highlighted slot. 'hide' = acronyms to drop. Prices, acceptance rates and h5-index are ILLUSTRATIVE -- verify against official stats / Google Scholar Metrics before publishing. Difficulty is derived on the page from accept_rate (else tier), so it needs no field here.",
+{ {"__README__": "Human-maintained curation layer merged by conferences_aggregator.py on top of the auto-fetched ai-deadlines data. price_map/tier_map/metrics_map are keyed by conference ACRONYM (case-insensitive, = name without the trailing year). 'add' = full conference objects the academic dataset omits (regional + industry safety-net venues). 'featured' = the highlighted slot. 'hide' = acronyms to drop. Prices, acceptance rates and h5-index are ILLUSTRATIVE -- verify against official stats / Google Scholar Metrics before publishing. Difficulty is derived on the page from accept_rate (else tier), so it needs no field here.",
 
     "metrics_map": {
       "NEURIPS": {"accept_rate": 0.26, "h5": 337},
@@ -224,12 +222,10 @@
         "url": "https://bracis.sbc.org.br/"
       }
       {"name": "Deep Learning Indaba 2026", "full": "Deep Learning Indaba - African ML Community", "topic": "ML (general)", "tier": "Workshop", "start": "2026-08-23", "end":
-"2026-08-29", "city": "Kigali", "country": "Rwanda", "mode": "In-person", "deadline": null, "deadline_type": "Application", "price": null, "price_note": "Application +
-scholarships; fees vary", "url": "https://deeplearningindaba.com/"},
+"2026-08-29", "city": "Kigali", "country": "Rwanda", "mode": "In-person", "deadline": null, "deadline_type": "Application", "price": null, "price_note": "Application + scholarships; fees vary", "url": "https://deeplearningindaba.com/"},
 
 {"name": "Khipu 2027", "full": "Khipu - Latin American Meeting in AI", "topic": "ML (general)", "tier": "Workshop", "start": "2027-03-08", "end": "2027-03-13", "city":
-"Santiago", "country": "Chile", "mode": "In-person", "deadline": "2026-11-15", "deadline_type": "Application", "price": 0, "price_note": "Application-based;
-scholarships available", "url": "https://khipu.ai/"},
+"Santiago", "country": "Chile", "mode": "In-person", "deadline": "2026-11-15", "deadline_type": "Application", "price": 0, "price_note": "Application-based; scholarships available", "url": "https://khipu.ai/"},
 
 {"name": "AMLD 2027", "full": "Applied Machine Learning Days", "topic": "AI Engineering", "tier": "Regional", "start": "2027-02-06", "end": "2027-02-09", "city":
 "Lausanne", "country": "Switzerland", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 500, "price_note": "Student rate lower", "url":
@@ -238,18 +234,14 @@ scholarships available", "url": "https://khipu.ai/"},
 {"name": "GTC 2027", "full": "NVIDIA GPU Technology Conference", "topic": "Systems / MLSys", "tier": "Industry", "start": "2027-03-22", "end": "2027-03-26", "city":
 "San Jose", "country": "USA", "mode": "Hybrid", "deadline": "2026-10-15", "deadline_type": "CFP (talks)", "price": 1200, "price_note": "Virtual attendance free", "url":
 "https://www.nvidia.com/gtc/"},
-
-{"name": "PyTorch Conf 2026", "full": "PyTorch Conference", "topic": "AI Engineering", "tier": "Industry", "start": "2026-10-22", "end": "2026-10-23", "city": "San
-Francisco", "country": "USA", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 550, "price_note": "Student / academic discounts", "url":
+{"name": "PyTorch Conf 2026", "full": "PyTorch Conference", "topic": "AI Engineering", "tier": "Industry", "start": "2026-10-22", "end": "2026-10-23", "city": "San Francisco", "country": "USA", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 550, "price_note": "Student / academic discounts", "url":
 "https://events.linuxfoundation.org/pytorch-conference/"},
 
-{"name": "Ray Summit 2026", "full": "Ray Summit (Anyscale)", "topic": "Systems / MLSys", "tier": "Industry", "start": "2026-09-30", "end": "2026-10-01", "city": "San
-Francisco", "country": "USA", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 800, "price_note": "Early-bird cheaper", "url":
+{"name": "Ray Summit 2026", "full": "Ray Summit (Anyscale)", "topic": "Systems / MLSys", "tier": "Industry", "start": "2026-09-30", "end": "2026-10-01", "city": "San Francisco", "country": "USA", "mode": "In-person", "deadline": null, "deadline_type": null, "price": 800, "price_note": "Early-bird cheaper", "url":
 "https://www.anyscale.com/ray-summit"},
 
 {"name": "Data+AI Summit 2027", "full": "Databricks Data + AI Summit", "topic": "Data Mining", "tier": "Industry", "start": "2027-06-14", "end": "2027-06-17", "city":
-"San Francisco", "country": "USA", "mode": "Hybrid", "deadline": "2027-01-15", "deadline_type": "CFP (talks)", "price": 1795, "price_note": "Virtual free; in-person
-paid", "url": "https://www.databricks.com/dataaisummit"},
+"San Francisco", "country": "USA", "mode": "Hybrid", "deadline": "2027-01-15", "deadline_type": "CFP (talks)", "price": 1795, "price_note": "Virtual free; in-person paid", "url": "https://www.databricks.com/dataaisummit"},
 
 {"name": "MLOps World 2026", "full": "MLOps World / Generative AI World Summit", "topic": "AI Engineering", "tier": "Industry", "start": "2026-11-05", "end":
 "2026-11-06", "city": "Austin", "country": "USA", "mode": "Hybrid", "deadline": null, "deadline_type": null, "price": 500, "price_note": "Virtual pass cheaper", "url":

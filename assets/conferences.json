@@ -1,172 +1,70 @@
 {
 "updated":"2026-07-26",
-"note":"Curated list of AI / ML conferences spanning top-tier, regional and workshop venues across many countries — including easier-to-get-into 'safety net' options.
-Deadlines and dates MUST be verified against each official CFP before publishing. tier: A* / A / B / Regional / Workshop / Industry. price = registration cost in USD (0 =
-free, null = varies / not announced). deadline = paper/CFP submission date (null = no open CFP).",
-"featured":[{"name":"AI Engineer World's Fair","full":"The AI Engineer World's Fair 2027","topic":"AI
-Engineering","tier":"Industry","start":"2027-06-15","end":"2027-06-17","city":"San
-Francisco","country":"USA","mode":"In-person","deadline":"2027-02-01","deadline_type":"CFP","price":1499,"price_note":"Early-bird from
-$899","url":"https://www.ai.engineer/","accept_rate":null,"h5":null}],
-"conferences":[
-{"name":"AAAI 2027","full":"AAAI Conference on Artificial Intelligence","topic":"ML (general)","tier":"A*","start":"2027-02-08","end":"2027-02-15","city":"Singapore","count
-ry":"Singapore","mode":"In-person","deadline":"2026-08-15","deadline_type":"Abstract","price":750,"price_note":"Student rate ~$350","url":"https://aaai.org/conference/
-aaai/","accept_rate":0.23,"h5":180},
-{"name":"IJCAI 2027","full":"Int'l Joint Conference on Artificial Intelligence","topic":"ML (general)","tier":"A*","start":"2027-08-21","end":"2027-08-27","city":"Guangzhou
-","country":"China","mode":"In-person","deadline":"2027-01-25","deadline_type":"Paper","price":700,"price_note":"Student rate
-~$350","url":"https://www.ijcai.org/","accept_rate":0.14,"h5":130},
-{"name":"MLSys 2027","full":"Conference on Machine Learning and Systems","topic":"Systems / MLSys","tier":"A","start":"2027-05-18","end":"2027-05-21","city":"Santa
-Clara","country":"USA","mode":"In-person","deadline":"2026-10-30","deadline_type":"Paper","price":700,"price_note":"Student rate
-~$300","url":"https://mlsys.org/","accept_rate":0.2,"h5":40},
-{"name":"AISTATS 2027","full":"Int'l Conference on Artificial Intelligence and Statistics","topic":"ML (general)","tier":"A","start":"2027-04-26","end":"2027-04-28","city":"
-Valencia","country":"Spain","mode":"In-person","deadline":"2026-10-09","deadline_type":"Paper","price":600,"price_note":"Student rate
-~$300","url":"https://aistats.org/","accept_rate":0.29,"h5":70},
-{"name":"ICLR 2027","full":"Int'l Conference on Learning Representations","topic":"ML (general)","tier":"A*","start":"2027-04-25","end":"2027-04-29","city":"Rio de
-Janeiro","country":"Brazil","mode":"Hybrid","deadline":"2026-09-24","deadline_type":"Paper","price":650,"price_note":"Student + virtual rates
-lower","url":"https://iclr.cc/","accept_rate":0.31,"h5":304},
-{"name":"CVPR 2027","full":"IEEE/CVF Conference on Computer Vision and Pattern Recognition","topic":"Computer Vision","tier":"A*","start":"2027-06-13","end":"2027-06-18","c
-ity":"Denver","country":"USA","mode":"In-person","deadline":"2026-11-14","deadline_type":"Paper","price":800,"price_note":"Student rate
-~$400","url":"https://cvpr.thecvf.com/","accept_rate":0.23,"h5":422},
-{"name":"ICML 2027","full":"Int'l Conference on Machine Learning","topic":"ML (
-general)","tier":"A*","start":"2027-07-11","end":"2027-07-17","city":"Seoul","country":"South
-Korea","mode":"Hybrid","deadline":"2027-01-28","deadline_type":"Paper","price":700,"price_note":"Student + virtual rates
-lower","url":"https://icml.cc/","accept_rate":0.27,"h5":268},
-{"name":"ACL 2027","full":"Annual Meeting of the Association for Computational Linguistics","topic":"LLM / NLP","tier":"A*","start":"2027-07-25","end":"2027-07-30","city":"
-Vienna","country":"Austria","mode":"Hybrid","deadline":"2027-02-15","deadline_type":"Paper","price":650,"price_note":"Student rate
-~$350","url":"https://www.aclweb.org/","accept_rate":0.21,"h5":200},
-{"name":"EACL 2027","full":"European Chapter of the Association for Computational Linguistics","topic":"LLM / NLP","tier":"A","start":"2027-03-24","end":"2027-03-29","city"
-:"Marseille","country":"France","mode":"Hybrid","deadline":"2026-10-16","deadline_type":"Paper","price":600,"price_note":"Student rate
-~$300","url":"https://www.aclweb.org/","accept_rate":0.25,"h5":66},
-{"name":"NAACL 2027","full":"North American Chapter of the ACL","topic":"LLM / NLP","tier":"A","start":"2027-04-11","end":"2027-04-16","city":"Mexico
-City","country":"Mexico","mode":"Hybrid","deadline":"2026-10-15","deadline_type":"Paper","price":600,"price_note":"Student rate
-~$300","url":"https://naacl.org/","accept_rate":0.26,"h5":132},
-{"name":"KDD 2027","full":"ACM SIGKDD Conference on Knowledge Discovery and Data Mining","topic":"Data Mining","tier":"A*","start":"2027-08-08","end":"2027-08-12","city":"T
-oronto","country":"Canada","mode":"In-person","deadline":"2027-02-05","deadline_type":"Paper","price":850,"price_note":"Student rate
-~$450","url":"https://kdd.org/","accept_rate":0.14,"h5":145},
-{"name":"ICCV 2027","full":"IEEE/CVF Int'l Conference on Computer Vision","topic":"Computer Vision","tier":"A*","start":"2027-10-10","end":"2027-10-17","city":"Milan","coun
-try":"Italy","mode":"In-person","deadline":"2027-03-08","deadline_type":"Paper","price":800,"price_note":"Student rate
-~$400","url":"https://iccv.thecvf.com/","accept_rate":0.26,"h5":239},
-{"name":"WWW 2027","full":"The ACM Web Conference","topic":"ML (general)","tier":"A*","start":"2027-04-19","end":"2027-04-23","city":"Dublin","country":"Ireland","mode":"In
--person","deadline":"2026-10-12","deadline_type":"Paper","price":700,"price_note":"Student rate ~$350","url":"https://www2027.thewebconf.org/","accept_rate":0.2,"h5":120},
-{"name":"AAMAS 2027","full":"Int'l Conference on Autonomous Agents and Multiagent Systems","topic":"ML (general)","tier":"A","start":"2027-05-10","end":"2027-05-14","city":
-"Pathos","country":"Cyprus","mode":"In-person","deadline":"2026-10-20","deadline_type":"Paper","price":600,"price_note":"Student rate
-~$300","url":"https://www.aamas-conference.org/","accept_rate":0.24,"h5":56},
-{"name":"UAI 2027","full":"Conference on Uncertainty in Artificial Intelligence","topic":"ML (general)","tier":"A","start":"2027-07-19","end":"2027-07-23","city":"Copenhage
-n","country":"Denmark","mode":"In-person","deadline":"2027-02-20","deadline_type":"Paper","price":550,"price_note":"Student rate
-~$300","url":"https://www.auai.org/","accept_rate":0.31,"h5":55},
-{"name":"COLT 2027","full":"Annual Conference on Learning Theory","topic":"AI Theory","tier":"A","start":"2027-06-28","end":"2027-07-01","city":"Zurich","country":"Switzerl
-and","mode":"In-person","deadline":"2027-02-12","deadline_type":"Paper","price":550,"price_note":"Student rate ~$300","url":"https://learningtheory.org/
-colt2027/","accept_rate":0.33,"h5":44},
-{"name":"FAccT 2027","full":"ACM Conference on Fairness, Accountability and Transparency","topic":"AI Ethics","tier":"A","start":"2027-06-07","end":"2027-06-10","city":"Mo
-ntreal","country":"Canada","mode":"Hybrid","deadline":"2027-01-30","deadline_type":"Paper","price":500,"price_note":"Student rate
-~$250","url":"https://facctconference.org/","accept_rate":0.25,"h5":60},
-{"name":"ICRA 2027","full":"IEEE Int'l Conference on Robotics and Automation","topic":"Robotics","tier":"A*","start":"2027-05-31","end":"2027-06-04","city":"Vienna","countr
-y":"Austria","mode":"In-person","deadline":"2026-09-15","deadline_type":"Paper","price":750,"price_note":"Student rate
-~$400","url":"https://www.ieee-ras.org/","accept_rate":0.43,"h5":150},
-{"name":"ICASSP 2027","full":"IEEE Int'l Conf. on Acoustics, Speech and Signal Processing","topic":"Speech / Audio","tier":"A","start":"2027-05-09","end":"2027-05-13","city
-":"Barcelona","country":"Spain","mode":"In-person","deadline":"2026-09-20","deadline_type":"Paper","price":700,"price_note":"Student rate
-~$350","url":"https://ieeeicassp.org/","accept_rate":0.48,"h5":141},
-{"name":"SIGIR 2027","full":"ACM SIGIR Conference on Research and Development in Information Retrieval","topic":"Information
-Retrieval","tier":"A*","start":"2027-07-11","end":"2027-07-15","city":"Amsterdam","country":"Netherlands","mode":"In-person","deadline":"2027-01-20","deadline_type":"Paper","price":750,"price_note":"Student rate
-~$400","url":"https://sigir.org/","accept_rate":0.2,"h5":105},
-{"name":"WSDM 2027","full":"ACM Int'l Conference on Web Search and Data Mining","topic":"Data Mining","tier":"A","start":"2027-02-22","end":"2027-02-26","city":"Jaipur","co
-untry":"India","mode":"In-person","deadline":"2026-08-14","deadline_type":"Paper","price":500,"price_note":"Student rate
-~$250","url":"https://www.wsdm-conference.org/","accept_rate":0.17,"h5":82},
-{"name":"SDM 2027","full":"SIAM Int'l Conference on Data Mining","topic":"Data Mining","tier":"B","start":"2027-04-29","end":"2027-05-01","city":"Minneapolis","country":"US
-A","mode":"In-person","deadline":"2026-10-25","deadline_type":"Paper","price":500,"price_note":"Student rate ~$250","url":"https://www.siam.org/
-conferences/","accept_rate":0.25,"h5":43},
-{"name":"PAKDD 2027","full":"Pacific-Asia Conference on Knowledge Discovery and Data Mining","topic":"Data
-Mining","tier":"B","start":"2027-05-24","end":"2027-05-27","city":"Kuala
-Lumpur","country":"Malaysia","mode":"In-person","deadline":"2026-11-20","deadline_type":"Paper","price":450,"price_note":"Student rate
-~$250","url":"https://www.pakdd.org/","accept_rate":0.25,"h5":43},
-{"name":"WACV 2027","full":"IEEE/CVF Winter Conference on Applications of Computer Vision","topic":"Computer Vision","tier":"B","start":"2027-01-05","end":"2027-01-09","cit
-y":"Tucson","country":"USA","mode":"In-person","deadline":"2026-09-05","deadline_type":"Paper","price":600,"price_note":"Student rate
-~$300","url":"https://wacv.thecvf.com/","accept_rate":0.38,"h5":79},
-{"name":"IJCNN 2027","full":"Int'l Joint Conference on Neural Networks","topic":"ML (general)","tier":"B","start":"2027-07-18","end":"2027-07-23","city":"Rome","country":"I
-taly","mode":"In-person","deadline":"2027-01-30","deadline_type":"Paper","price":550,"price_note":"Student rate
-~$300","url":"https://www.ijcnn.org/","accept_rate":0.55,"h5":55},
-{"name":"ESANN 2027","full":"European Symposium on Artificial Neural Networks","topic":"ML (general)","tier":"Regional","start":"2027-04-21","end":"2027-04-23","city":"Brug
-es","country":"Belgium","mode":"In-person","deadline":"2026-11-07","deadline_type":"Paper","price":500,"price_note":"Student rate
-~$300","url":"https://www.esann.org/","accept_rate":null,"h5":null},
-{"name":"ICME 2027","full":"IEEE Int'l Conference on Multimedia
-Expo","topic":"Multimodal","tier":"B","start":"2027-07-05","end":"2027-07-09","city":"Seoul","country":"South
-Korea","mode":"In-person","deadline":"2026-12-10","deadline_type":"Paper","price":550,"price_note":"Student rate
-~$300","url":"https://www.ieeeicme.org/","accept_rate":0.3,"h5":47},
-{"name":"L4DC 2027","full":"Learning for Dynamics and Control Conference","topic":"Reinforcement Learning","tier":"B","start":"2027-06-16","end":"2027-06-18","city":"Philad
-elphia","country":"USA","mode":"In-person","deadline":"2026-11-10","deadline_type":"Paper","price":450,"price_note":"Student rate
-~$250","url":"https://l4dc.web.ox.ac.uk/","accept_rate":0.3,"h5":25},
+"note":"Curated list of AI / ML conferences spanning top-tier, regional and workshop venues across many countries — including easier-to-get-into 'safety net' options. Deadlines and dates MUST be verified against each official CFP before publishing. tier: A* / A / B / Regional / Workshop / Industry. price = registration cost in USD (0 = free, null = varies / not announced). deadline = paper/CFP submission date (null = no open CFP).",
+"featured":[{"name":"AI Engineer World's Fair","full":"The AI Engineer World's Fair 2027","topic":"AI Engineering","tier":"Industry","start":"2027-06-15","end":"2027-06-17","city":"San Francisco","country":"USA","mode":"In-person","deadline":"2027-02-01","deadline_type":"CFP","price":1499,"price_note":"Early-bird from $899","url":"https://www.ai.engineer/","accept_rate":null,"h5":null}],
+"conferences":[{"name":"AAAI 2027","full":"AAAI Conference on Artificial Intelligence","topic":"ML (general)","tier":"A*","start":"2027-02-08","end":"2027-02-15","city":"Singapore","country":"Singapore","mode":"In-person","deadline":"2026-08-15","deadline_type":"Abstract","price":750,"price_note":"Student rate ~$350","url":"https://aaai.org/conference/aaai/","accept_rate":0.23,"h5":180},
+{"name":"IJCAI 2027","full":"Int'l Joint Conference on Artificial Intelligence","topic":"ML (general)","tier":"A*","start":"2027-08-21","end":"2027-08-27","city":"Guangzhou","country":"China","mode":"In-person","deadline":"2027-01-25","deadline_type":"Paper","price":700,"price_note":"Student rate ~$350","url":"https://www.ijcai.org/","accept_rate":0.14,"h5":130},
+{"name":"MLSys 2027","full":"Conference on Machine Learning and Systems","topic":"Systems / MLSys","tier":"A","start":"2027-05-18","end":"2027-05-21","city":"Santa Clara","country":"USA","mode":"In-person","deadline":"2026-10-30","deadline_type":"Paper","price":700,"price_note":"Student rate ~$300","url":"https://mlsys.org/","accept_rate":0.2,"h5":40},
+{"name":"AISTATS 2027","full":"Int'l Conference on Artificial Intelligence and Statistics","topic":"ML (general)","tier":"A","start":"2027-04-26","end":"2027-04-28","city":"Valencia","country":"Spain","mode":"In-person","deadline":"2026-10-09","deadline_type":"Paper","price":600,"price_note":"Student rate ~$300","url":"https://aistats.org/","accept_rate":0.29,"h5":70},
+{"name":"ICLR 2027","full":"Int'l Conference on Learning Representations","topic":"ML (general)","tier":"A*","start":"2027-04-25","end":"2027-04-29","city":"Rio de Janeiro","country":"Brazil","mode":"Hybrid","deadline":"2026-09-24","deadline_type":"Paper","price":650,"price_note":"Student + virtual rates lower","url":"https://iclr.cc/","accept_rate":0.31,"h5":304},
+{"name":"CVPR 2027","full":"IEEE/CVF Conference on Computer Vision and Pattern Recognition","topic":"Computer Vision","tier":"A*","start":"2027-06-13","end":"2027-06-18","city":"Denver","country":"USA","mode":"In-person","deadline":"2026-11-14","deadline_type":"Paper","price":800,"price_note":"Student rate ~$400","url":"https://cvpr.thecvf.com/","accept_rate":0.23,"h5":422},
+{"name":"ICML 2027","full":"Int'l Conference on Machine Learning","topic":"ML (general)","tier":"A*","start":"2027-07-11","end":"2027-07-17","city":"Seoul","country":"South Korea","mode":"Hybrid","deadline":"2027-01-28","deadline_type":"Paper","price":700,"price_note":"Student + virtual rates lower","url":"https://icml.cc/","accept_rate":0.27,"h5":268},
+{"name":"ACL 2027","full":"Annual Meeting of the Association for Computational Linguistics","topic":"LLM / NLP","tier":"A*","start":"2027-07-25","end":"2027-07-30","city":"Vienna","country":"Austria","mode":"Hybrid","deadline":"2027-02-15","deadline_type":"Paper","price":650,"price_note":"Student rate ~$350","url":"https://www.aclweb.org/","accept_rate":0.21,"h5":200},
+{"name":"EACL 2027","full":"European Chapter of the Association for Computational Linguistics","topic":"LLM / NLP","tier":"A","start":"2027-03-24","end":"2027-03-29","city":"Marseille","country":"France","mode":"Hybrid","deadline":"2026-10-16","deadline_type":"Paper","price":600,"price_note":"Student rate ~$300","url":"https://www.aclweb.org/","accept_rate":0.25,"h5":66},
+{"name":"NAACL 2027","full":"North American Chapter of the ACL","topic":"LLM / NLP","tier":"A","start":"2027-04-11","end":"2027-04-16","city":"Mexico City","country":"Mexico","mode":"Hybrid","deadline":"2026-10-15","deadline_type":"Paper","price":600,"price_note":"Student rate ~$300","url":"https://naacl.org/","accept_rate":0.26,"h5":132},
+{"name":"KDD 2027","full":"ACM SIGKDD Conference on Knowledge Discovery and Data Mining","topic":"Data Mining","tier":"A*","start":"2027-08-08","end":"2027-08-12","city":"Toronto","country":"Canada","mode":"In-person","deadline":"2027-02-05","deadline_type":"Paper","price":850,"price_note":"Student rate ~$450","url":"https://kdd.org/","accept_rate":0.14,"h5":145},
+{"name":"ICCV 2027","full":"IEEE/CVF Int'l Conference on Computer Vision","topic":"Computer Vision","tier":"A*","start":"2027-10-10","end":"2027-10-17","city":"Milan","country":"Italy","mode":"In-person","deadline":"2027-03-08","deadline_type":"Paper","price":800,"price_note":"Student rate ~$400","url":"https://iccv.thecvf.com/","accept_rate":0.26,"h5":239},
+{"name":"WWW 2027","full":"The ACM Web Conference","topic":"ML (general)","tier":"A*","start":"2027-04-19","end":"2027-04-23","city":"Dublin","country":"Ireland","mode":"In-person","deadline":"2026-10-12","deadline_type":"Paper","price":700,"price_note":"Student rate ~$350","url":"https://www2027.thewebconf.org/","accept_rate":0.2,"h5":120},
+{"name":"AAMAS 2027","full":"Int'l Conference on Autonomous Agents and Multiagent Systems","topic":"ML (general)","tier":"A","start":"2027-05-10","end":"2027-05-14","city":"Pathos","country":"Cyprus","mode":"In-person","deadline":"2026-10-20","deadline_type":"Paper","price":600,"price_note":"Student rate ~$300","url":"https://www.aamas-conference.org/","accept_rate":0.24,"h5":56},
+{"name":"UAI 2027","full":"Conference on Uncertainty in Artificial Intelligence","topic":"ML (general)","tier":"A","start":"2027-07-19","end":"2027-07-23","city":"Copenhagen","country":"Denmark","mode":"In-person","deadline":"2027-02-20","deadline_type":"Paper","price":550,"price_note":"Student rate ~$300","url":"https://www.auai.org/","accept_rate":0.31,"h5":55},
+{"name":"COLT 2027","full":"Annual Conference on Learning Theory","topic":"AI Theory","tier":"A","start":"2027-06-28","end":"2027-07-01","city":"Zurich","country":"Switzerland","mode":"In-person","deadline":"2027-02-12","deadline_type":"Paper","price":550,"price_note":"Student rate ~$300","url":"https://learningtheory.org/colt2027/","accept_rate":0.33,"h5":44},
+{"name":"FAccT 2027","full":"ACM Conference on Fairness, Accountability and Transparency","topic":"AI Ethics","tier":"A","start":"2027-06-07","end":"2027-06-10","city":"Montreal","country":"Canada","mode":"Hybrid","deadline":"2027-01-30","deadline_type":"Paper","price":500,"price_note":"Student rate ~$250","url":"https://facctconference.org/","accept_rate":0.25,"h5":60},
+{"name":"ICRA 2027","full":"IEEE Int'l Conference on Robotics and Automation","topic":"Robotics","tier":"A*","start":"2027-05-31","end":"2027-06-04","city":"Vienna","country":"Austria","mode":"In-person","deadline":"2026-09-15","deadline_type":"Paper","price":750,"price_note":"Student rate ~$400","url":"https://www.ieee-ras.org/","accept_rate":0.43,"h5":150},
+{"name":"ICASSP 2027","full":"IEEE Int'l Conf. on Acoustics, Speech and Signal Processing","topic":"Speech / Audio","tier":"A","start":"2027-05-09","end":"2027-05-13","city":"Barcelona","country":"Spain","mode":"In-person","deadline":"2026-09-20","deadline_type":"Paper","price":700,"price_note":"Student rate ~$350","url":"https://ieeeicassp.org/","accept_rate":0.48,"h5":141},
+{"name":"SIGIR 2027","full":"ACM SIGIR Conference on Research and Development in Information Retrieval","topic":"Information Retrieval","tier":"A*","start":"2027-07-11","end":"2027-07-15","city":"Amsterdam","country":"Netherlands","mode":"In-person","deadline":"2027-01-20","deadline_type":"Paper","price":750,"price_note":"Student rate ~$400","url":"https://sigir.org/","accept_rate":0.2,"h5":105},
+{"name":"WSDM 2027","full":"ACM Int'l Conference on Web Search and Data Mining","topic":"Data Mining","tier":"A","start":"2027-02-22","end":"2027-02-26","city":"Jaipur","country":"India","mode":"In-person","deadline":"2026-08-14","deadline_type":"Paper","price":500,"price_note":"Student rate ~$250","url":"https://www.wsdm-conference.org/","accept_rate":0.17,"h5":82},
+{"name":"SDM 2027","full":"SIAM Int'l Conference on Data Mining","topic":"Data Mining","tier":"B","start":"2027-04-29","end":"2027-05-01","city":"Minneapolis","country":"USA","mode":"In-person","deadline":"2026-10-25","deadline_type":"Paper","price":500,"price_note":"Student rate ~$250","url":"https://www.siam.org/conferences/","accept_rate":0.25,"h5":43},
+{"name":"PAKDD 2027","full":"Pacific-Asia Conference on Knowledge Discovery and Data Mining","topic":"Data Mining","tier":"B","start":"2027-05-24","end":"2027-05-27","city":"Kuala Lumpur","country":"Malaysia","mode":"In-person","deadline":"2026-11-20","deadline_type":"Paper","price":450,"price_note":"Student rate ~$250","url":"https://www.pakdd.org/","accept_rate":0.25,"h5":43},
+{"name":"WACV 2027","full":"IEEE/CVF Winter Conference on Applications of Computer Vision","topic":"Computer Vision","tier":"B","start":"2027-01-05","end":"2027-01-09","city":"Tucson","country":"USA","mode":"In-person","deadline":"2026-09-05","deadline_type":"Paper","price":600,"price_note":"Student rate ~$300","url":"https://wacv.thecvf.com/","accept_rate":0.38,"h5":79},
+{"name":"IJCNN 2027","full":"Int'l Joint Conference on Neural Networks","topic":"ML (general)","tier":"B","start":"2027-07-18","end":"2027-07-23","city":"Rome","country":"Italy","mode":"In-person","deadline":"2027-01-30","deadline_type":"Paper","price":550,"price_note":"Student rate ~$300","url":"https://www.ijcnn.org/","accept_rate":0.55,"h5":55},
+{"name":"ESANN 2027","full":"European Symposium on Artificial Neural Networks","topic":"ML (general)","tier":"Regional","start":"2027-04-21","end":"2027-04-23","city":"Bruges","country":"Belgium","mode":"In-person","deadline":"2026-11-07","deadline_type":"Paper","price":500,"price_note":"Student rate ~$300","url":"https://www.esann.org/","accept_rate":null,"h5":null},
+{"name":"ICME 2027","full":"IEEE Int'l Conference on MultimediaExpo","topic":"Multimodal","tier":"B","start":"2027-07-05","end":"2027-07-09","city":"Seoul","country":"SouthKorea","mode":"In-person","deadline":"2026-12-10","deadline_type":"Paper","price":550,"price_note":"Student rate~$300","url":"https://www.ieeeicme.org/","accept_rate":0.3,"h5":47},
+{"name":"L4DC 2027","full":"Learning for Dynamics and Control Conference","topic":"Reinforcement Learning","tier":"B","start":"2027-06-16","end":"2027-06-18","city":"Philadelphia","country":"USA","mode":"In-person","deadline":"2026-11-10","deadline_type":"Paper","price":450,"price_note":"Student rate~$250","url":"https://l4dc.web.ox.ac.uk/","accept_rate":0.3,"h5":25},
 {"name":"CODS-COMAD 2026","full":"ACM India Joint Int'l Conference on Data Science and Management of Data","topic":"Data Mining","tier":"Regional","start":"2026-12-17","end":
-"2026-12-20","city":"Chennai","country":"India","mode":"In-person","deadline":"2026-08-30","deadline_type":"Paper","price":250,"price_note":"Student rate
-~$120","url":"https://cods-comad.in/","accept_rate":null,"h5":null},
-{"name":"ALTA 2026","full":"Australasian Language Technology Association Workshop","topic":"LLM / NLP","tier":"Regional","start":"2026-12-02","end":"2026-12-04","city":"Melbourne","country":"Australia","mode":"In-person","deadline":"2026-08-25","deadline_type":"Paper","price":300,"price_note":"Student rate
-~$150","url":"https://www.alta.asn.au/","accept_rate":null,"h5":null},
-{"name":"Khipu 2027","full":"Khipu - Latin American Meeting in AI","topic":"ML (general)","tier":"Workshop","start":"2027-03-08","end":"2027-03-13","city":"Santiago","count
-ry":"Chile","mode":"In-person","deadline":"2026-11-15","deadline_type":"Application","price":0,"price_note":"Application-based scholarships
-available","url":"https://khipu.ai/","accept_rate":null,"h5":null},
-{"name":"NeurIPS 2026","full":"Conference on Neural Information Processing Systems","topic":"ML (general)","tier":"A*","start":"2026-12-06","end":"2026-12-12","city":"San
-Diego","country":"USA","mode":"Hybrid","deadline":null,"deadline_type":null,"price":900,"price_note":"Student + virtual rates
-lower","url":"https://neurips.cc/","accept_rate":0.26,"h5":337},
-{"name":"EMNLP 2026","full":"Conference on Empirical Methods in Natural Language Processing","topic":"LLM /
-NLP","tier":"A*","start":"2026-11-08","end":"2026-11-12","city":"Abu
-Dhabi","country":"UAE","mode":"Hybrid","deadline":null,"deadline_type":null,"price":650,"price_note":"Student rate
-~$350","url":"https://2026.emnlp.org/","accept_rate":0.23,"h5":155},
-{"name":"COLM 2026","full":"Conference on Language Modeling","topic":"LLM / NLP","tier":"A*","start":"2026-10-06","end":"2026-10-09","city":"Montreal","country":"Canada","mo
-de":"In-person","deadline":null,"deadline_type":null,"price":550,"price_note":"Student rate ~$300","url":"https://colmweb.org/","accept_rate":0.3,"h5":null},
-{"name":"ECAI 2026","full":"European Conference on Artificial Intelligence","topic":"ML (general)","tier":"A","start":"2026-10-17","end":"2026-10-22","city":"Bologna","coun
-try":"Italy","mode":"In-person","deadline":null,"deadline_type":null,"price":600,"price_note":"Student rate
-~$300","url":"https://www.eurai.org/","accept_rate":null,"h5":null},
-{"name":"CoRL 2026","full":"Conference on Robot Learning","topic":"Robotics","tier":"A*","start":"2026-11-09","end":"2026-11-12","city":"Seoul","country":"South
-Korea","mode":"In-person","deadline":null,"deadline_type":null,"price":550,"price_note":"Student rate
-~$300","url":"https://www.corl.org/","accept_rate":0.3,"h5":52},
-{"name":"IROS 2026","full":"IEEE/RSJ Int'l Conference on Intelligent Robots and Systems","topic":"Robotics","tier":"A*","start":"2026-10-18","end":"2026-10-23","city":"Hangz
-hou","country":"China","mode":"In-person","deadline":null,"deadline_type":null,"price":700,"price_note":"Student rate
-~$400","url":"https://www.iros.org/","accept_rate":0.46,"h5":111},
-{"name":"MICCAI 2026","full":"Medical Image Computing and Computer Assisted Intervention","topic":"Medical
-AI","tier":"A*","start":"2026-10-04","end":"2026-10-08","city":"Daejeon","country":"South
-Korea","mode":"In-person","deadline":null,"deadline_type":null,"price":700,"price_note":"Student rate ~$400","url":"https://www.miccai.org/","accept_rate":0.31,"h5":110},
-{"name":"RecSys 2026","full":"ACM Conference on Recommender Systems","topic":"Information
-Retrieval","tier":"A","start":"2026-09-21","end":"2026-09-25","city":"Prague","country":"Czech
-Republic","mode":"In-person","deadline":null,"deadline_type":null,"price":650,"price_note":"Student rate ~$350","url":"https://recsys.acm.org/","accept_rate":0.2,"h5":68},
+"2026-12-20","city":"Chennai","country":"India","mode":"In-person","deadline":"2026-08-30","deadline_type":"Paper","price":250,"price_note":"Student rate~$120","url":"https://cods-comad.in/","accept_rate":null,"h5":null},
+{"name":"ALTA 2026","full":"Australasian Language Technology Association Workshop","topic":"LLM / NLP","tier":"Regional","start":"2026-12-02","end":"2026-12-04","city":"Melbourne","country":"Australia","mode":"In-person","deadline":"2026-08-25","deadline_type":"Paper","price":300,"price_note":"Student rate~$150","url":"https://www.alta.asn.au/","accept_rate":null,"h5":null},
+{"name":"Khipu 2027","full":"Khipu - Latin American Meeting in AI","topic":"ML (general)","tier":"Workshop","start":"2027-03-08","end":"2027-03-13","city":"Santiago","country":"Chile","mode":"In-person","deadline":"2026-11-15","deadline_type":"Application","price":0,"price_note":"Application-based scholarshipsavailable","url":"https://khipu.ai/","accept_rate":null,"h5":null},
+{"name":"NeurIPS 2026","full":"Conference on Neural Information Processing Systems","topic":"ML (general)","tier":"A*","start":"2026-12-06","end":"2026-12-12","city":"SanDiego","country":"USA","mode":"Hybrid","deadline":null,"deadline_type":null,"price":900,"price_note":"Student + virtual rateslower","url":"https://neurips.cc/","accept_rate":0.26,"h5":337},
+{"name":"EMNLP 2026","full":"Conference on Empirical Methods in Natural Language Processing","topic":"LLM /NLP","tier":"A*","start":"2026-11-08","end":"2026-11-12","city":"AbuDhabi","country":"UAE","mode":"Hybrid","deadline":null,"deadline_type":null,"price":650,"price_note":"Student rate~$350","url":"https://2026.emnlp.org/","accept_rate":0.23,"h5":155},
+{"name":"COLM 2026","full":"Conference on Language Modeling","topic":"LLM / NLP","tier":"A*","start":"2026-10-06","end":"2026-10-09","city":"Montreal","country":"Canada","mode":"In-person","deadline":null,"deadline_type":null,"price":550,"price_note":"Student rate ~$300","url":"https://colmweb.org/","accept_rate":0.3,"h5":null},
+{"name":"ECAI 2026","full":"European Conference on Artificial Intelligence","topic":"ML (general)","tier":"A","start":"2026-10-17","end":"2026-10-22","city":"Bologna","country":"Italy","mode":"In-person","deadline":null,"deadline_type":null,"price":600,"price_note":"Student rate~$300","url":"https://www.eurai.org/","accept_rate":null,"h5":null},
+{"name":"CoRL 2026","full":"Conference on Robot Learning","topic":"Robotics","tier":"A*","start":"2026-11-09","end":"2026-11-12","city":"Seoul","country":"SouthKorea","mode":"In-person","deadline":null,"deadline_type":null,"price":550,"price_note":"Student rate~$300","url":"https://www.corl.org/","accept_rate":0.3,"h5":52},
+{"name":"IROS 2026","full":"IEEE/RSJ Int'l Conference on Intelligent Robots and Systems","topic":"Robotics","tier":"A*","start":"2026-10-18","end":"2026-10-23","city":"Hangzhou","country":"China","mode":"In-person","deadline":null,"deadline_type":null,"price":700,"price_note":"Student rate~$400","url":"https://www.iros.org/","accept_rate":0.46,"h5":111},
+{"name":"MICCAI 2026","full":"Medical Image Computing and Computer Assisted Intervention","topic":"MedicalAI","tier":"A*","start":"2026-10-04","end":"2026-10-08","city":"Daejeon","country":"SouthKorea","mode":"In-person","deadline":null,"deadline_type":null,"price":700,"price_note":"Student rate ~$400","url":"https://www.miccai.org/","accept_rate":0.31,"h5":110},
+{"name":"RecSys 2026","full":"ACM Conference on Recommender Systems","topic":"Information Retrieval","tier":"A","start":"2026-09-21","end":"2026-09-25","city":"Prague","country":"CzechRepublic","mode":"In-person","deadline":null,"deadline_type":null,"price":650,"price_note":"Student rate ~$350","url":"https://recsys.acm.org/","accept_rate":0.2,"h5":68},
 {"name":"CIKM 2026","full":"ACM Int'l Conference on Information and Knowledge Management","topic":"Information Retrieval","tier":"A","start":"2026-10-19","end":"2026-10-23"
-,"city":"Toronto","country":"Canada","mode":"In-person","deadline":null,"deadline_type":null,"price":650,"price_note":"Student rate
-~$350","url":"https://www.cikm.org/","accept_rate":0.21,"h5":84},
-{"name":"ICDM 2026","full":"IEEE Int'l Conference on Data Mining","topic":"Data Mining","tier":"A","start":"2026-11-30","end":"2026-12-03","city":"Bangkok","country":"Thail
-and","mode":"In-person","deadline":null,"deadline_type":null,"price":600,"price_note":"Student rate ~$350","url":"https://icdm.org/","accept_rate":0.2,"h5":70},
-{"name":"ECMLPKDD 2026","full":"European Conference on ML & Principles of Knowledge Discovery","topic":"Data Mining","tier":"A","start":"2026-09-14","end":"2026-09-18","ci
-ty":"Porto","country":"Portugal","mode":"In-person","deadline":null,"deadline_type":null,"price":600,"price_note":"Student rate
-~$300","url":"https://ecmlpkdd.org/","accept_rate":0.25,"h5":60},
+,"city":"Toronto","country":"Canada","mode":"In-person","deadline":null,"deadline_type":null,"price":650,"price_note":"Student rate~$350","url":"https://www.cikm.org/","accept_rate":0.21,"h5":84},
+{"name":"ICDM 2026","full":"IEEE Int'l Conference on Data Mining","topic":"Data Mining","tier":"A","start":"2026-11-30","end":"2026-12-03","city":"Bangkok","country":"Thailand","mode":"In-person","deadline":null,"deadline_type":null,"price":600,"price_note":"Student rate ~$350","url":"https://icdm.org/","accept_rate":0.2,"h5":70},
+{"name":"ECMLPKDD 2026","full":"European Conference on ML & Principles of Knowledge Discovery","topic":"Data Mining","tier":"A","start":"2026-09-14","end":"2026-09-18","city":"Porto","country":"Portugal","mode":"In-person","deadline":null,"deadline_type":null,"price":600,"price_note":"Student rate~$300","url":"https://ecmlpkdd.org/","accept_rate":0.25,"h5":60},
 {"name":"ACM MM 2026","full":"ACM Multimedia","topic":"Multimodal","tier":"A","start":"2026-10-26","end":"2026-10-30","city":"Dublin","country":"Ireland","mode":"In-person"
-,"deadline":null,"deadline_type":null,"price":650,"price_note":"Student rate ~$350","url":"https://www.acmmm.org/","accept_rate":0.28,"h5":91},
-{"name":"KR 2026","full":"Int'l Conference on Principles of Knowledge Representation and Reasoning","topic":"AI
-Theory","tier":"A","start":"2026-11-02","end":"2026-11-08","city":"Cape Town","country":"South
-Africa","mode":"In-person","deadline":null,"deadline_type":null,"price":500,"price_note":"Student rate ~$300","url":"https://kr.org/","accept_rate":0.3,"h5":34},
+,"deadline":null,"deadline_type":null,"price":650,"price_note":"Student rate ~$350","url":"https://www.acmmm.org/","accept_rate":0.28,"h5":91},{"name":"KR 2026","full":"Int'l Conference on Principles of Knowledge Representation and Reasoning","topic":"AITheory","tier":"A","start":"2026-11-02","end":"2026-11-08","city":"Cape Town","country":"SouthAfrica","mode":"In-person","deadline":null,"deadline_type":null,"price":500,"price_note":"Student rate ~$300","url":"https://kr.org/","accept_rate":0.3,"h5":34},
 {"name":"RLC 2026","full":"Reinforcement Learning Conference","topic":"Reinforcement Learning","tier":"A","start":"2026-08-11","end":"2026-08-14","city":"Edmonton","country"
-:"Canada","mode":"In-person","deadline":null,"deadline_type":null,"price":500,"price_note":"Student rate
-~$300","url":"https://rl-conference.cc/","accept_rate":null,"h5":null},
-{"name":"AutoML 2026","full":"Int'l Conference on Automated Machine Learning","topic":"ML (general)","tier":"B","start":"2026-09-08","end":"2026-09-11","city":"Freiburg","c
-ountry":"Germany","mode":"In-person","deadline":null,"deadline":null,"price":450,"price_note":"Student rate
-~$250","url":"https://2026.automl.cc/","accept_rate":0.35,"h5":20},
-{"name":"BMVC 2026","full":"British Machine Vision Conference","topic":"Computer Vision","tier":"B","start":"2026-11-23","end":"2026-11-26","city":"London","country":"UK","
-mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate ~$250","url":"https://bmvc2026.org/","accept_rate":0.3,"h5":55},
-{"name":"ACCV 2026","full":"Asian Conference on Computer Vision","topic":"Computer Vision","tier":"A","start":"2026-12-07","end":"2026-12-11","city":"DaNang","country":"Vietnam","mode":"In-person","deadline":null,"deadline_type":null,"price":500,"price_note":"Student rate
-~$300","url":"https://www.accv.org/","accept_rate":0.3,"h5":33},
+:"Canada","mode":"In-person","deadline":null,"deadline_type":null,"price":500,"price_note":"Student rate~$300","url":"https://rl-conference.cc/","accept_rate":null,"h5":null},
+{"name":"AutoML 2026","full":"Int'l Conference on Automated Machine Learning","topic":"ML (general)","tier":"B","start":"2026-09-08","end":"2026-09-11","city":"Freiburg","country":"Germany","mode":"In-person","deadline":null,"deadline":null,"price":450,"price_note":"Student rate~$250","url":"https://2026.automl.cc/","accept_rate":0.35,"h5":20},
+{"name":"BMVC 2026","full":"British Machine Vision Conference","topic":"Computer Vision","tier":"B","start":"2026-11-23","end":"2026-11-26","city":"London","country":"UK","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate ~$250","url":"https://bmvc2026.org/","accept_rate":0.3,"h5":55},
+{"name":"ACCV 2026","full":"Asian Conference on Computer Vision","topic":"Computer Vision","tier":"A","start":"2026-12-07","end":"2026-12-11","city":"DaNang","country":"Vietnam","mode":"In-person","deadline":null,"deadline_type":null,"price":500,"price_note":"Student rate~$300","url":"https://www.accv.org/","accept_rate":0.3,"h5":33},
 {"name":"ICPR 2026","full":"Int'l Conference on Pattern Recognition","topic":"Computer Vision","tier":"B","start":"2026-08-30","end":"2026-09-03","city":"Osaka","country":"Japan","mode":"In-person","deadline":null,"deadline_type":null,"price":550,"price_note":"Student rate ~$300","url":"https://www.iapr.org/","accept_rate":0.42,"h5":55},
 {"name":"ACML 2026","full":"Asian Conference on Machine Learning","topic":"ML (general)","tier":"B","start":"2026-12-09","end":"2026-12-12","city":"Taipei","country":"Taiwan","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate ~$250","url":"https://www.acml-conf.org/","accept_rate":0.3,"h5":26},
-{"name":"PRICAI 2026","full":"Pacific Rim Int'l Conference on Artificial Intelligence","topic":"ML (general)","tier":"B","start":"2026-11-16","end":"2026-11-20","city":"Hanoi","country":"Vietnam","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate
-~$250","url":"https://www.pricai.org/","accept_rate":0.35,"h5":25},
+{"name":"PRICAI 2026","full":"Pacific Rim Int'l Conference on Artificial Intelligence","topic":"ML (general)","tier":"B","start":"2026-11-16","end":"2026-11-20","city":"Hanoi","country":"Vietnam","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate ~$250","url":"https://www.pricai.org/","accept_rate":0.35,"h5":25},
 {"name":"ICANN 2026","full":"Int'l Conference on Artificial Neural Networks","topic":"ML (general)","tier":"B","start":"2026-09-15","end":"2026-09-18","city":"Munich","country":"Germany","mode":"In-person","deadline":null,"deadline_type":null,"price":500,"price_note":"Student rate ~$300","url":"https://e-nns.org/","accept_rate":0.5,"h5":34},
-{"name":"ICONIP 2026","full":"Int'l Conference on Neural Information Processing","topic":"ML (general)","tier":"B","start":"2026-11-24","end":"2026-11-28","city":"Bangkok","country":"Thailand","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate
-~$250","url":"https://www.apnns.org/","accept_rate":0.45,"h5":30},
-{"name":"DSAA 2026","full":"IEEE Int'l Conference on Data Science and Advanced Analytics","topic":"Data Mining","tier":"B","start":"2026-10-13","end":"2026-10-16","city":"Athens","country":"Greece","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate
-~$250","url":"https://dsaa.ieee.org/","accept_rate":0.3,"h5":28},
+{"name":"ICONIP 2026","full":"Int'l Conference on Neural Information Processing","topic":"ML (general)","tier":"B","start":"2026-11-24","end":"2026-11-28","city":"Bangkok","country":"Thailand","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate ~$250","url":"https://www.apnns.org/","accept_rate":0.45,"h5":30},
+{"name":"DSAA 2026","full":"IEEE Int'l Conference on Data Science and Advanced Analytics","topic":"Data Mining","tier":"B","start":"2026-10-13","end":"2026-10-16","city":"Athens","country":"Greece","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate ~$250","url":"https://dsaa.ieee.org/","accept_rate":0.3,"h5":28},
 {"name":"AACL-IJCNLP 2026","full":"Asia-Pacific Chapter of the ACL","topic":"LLM / NLP","tier":"B","start":"2026-12-01","end":"2026-12-05","city":"Manila","country":"Philippines","mode":"In-person","deadline":null,"deadline_type":null,"price":450,"price_note":"Student rate ~$250","url":"https://www.aaclweb.org/","accept_rate":0.3,"h5":30},
 {"name":"CoNLL 2026","full":"Conference on Computational Natural Language Learning","topic":"LLM / NLP","tier":"B","start":"2026-11-08","end":"2026-11-09","city":"Abu Dhabi","country":"UAE","mode":"In-person","deadline":null,"deadline_type":null,"price":400,"price_note":"Co-located with EMNLP","url":"https://www.conll.org/","accept_rate":0.3,"h5":45},
-{"name":"NLPCC 2026","full":"CCF Int'l Conference on Natural Language Processing and Chinese Computing","topic":"LLM / NLP","tier":"Regional","start":"2026-10-16","end":"2026-10-18","city":"Chengdu","country":"China","mode":"In-person","deadline":null,"deadline_type":null,"price":400,"price_note":"Student rate
-~$200","url":"http://tcci.ccf.org.cn/conference/2026/","accept_rate":null,"h5":null},
-{"name":"BRACIS 2026","full":"Brazilian Conference on Intelligent Systems","topic":"ML (general)","tier":"Regional","start":"2026-11-16","end":"2026-11-20","city":"Recife","country":"Brazil","mode":"In-person","deadline":null,"deadline_type":null,"price":250,"price_note":"Student rate
-~$120","url":"https://bracis.sbc.org.br/","accept_rate":null,"h5":null},
+{"name":"NLPCC 2026","full":"CCF Int'l Conference on Natural Language Processing and Chinese Computing","topic":"LLM / NLP","tier":"Regional","start":"2026-10-16","end":"2026-10-18","city":"Chengdu","country":"China","mode":"In-person","deadline":null,"deadline_type":null,"price":400,"price_note":"Student rate ~$200","url":"http://tcci.ccf.org.cn/conference/2026/","accept_rate":null,"h5":null},
+{"name":"BRACIS 2026","full":"Brazilian Conference on Intelligent Systems","topic":"ML (general)","tier":"Regional","start":"2026-11-16","end":"2026-11-20","city":"Recife","country":"Brazil","mode":"In-person","deadline":null,"deadline_type":null,"price":250,"price_note":"Student rate ~$120","url":"https://bracis.sbc.org.br/","accept_rate":null,"h5":null},
 {"name":"Deep Learning Indaba 2026","full":"Deep Learning Indaba — African ML Community","topic":"ML (general)","tier":"Workshop","start":"2026-08-23","end":"2026-08-29","city":"Kigali","country":"Rwanda","mode":"In-person","deadline":"Application","price":null,"price_note":"Application + scholarships, fees vary","url":"https://deeplearningindaba.com/","accept_rate":null,"h5":null},
-{"name":"INTERSPEECH 2026","full":"Conference of the Int'l Speech Communication Association","topic":"Speech / Audio","tier":"A","start":"2026-09-06","end":"2026-09-10","city":"Sydney","country":"Australia","mode":"In-person","deadline":null,"deadline_type":null,"price":750,"price_note":"Student rate
-~$400","url":"https://www.interspeech.org/","accept_rate":0.48,"h5":108},
+{"name":"INTERSPEECH 2026","full":"Conference of the Int'l Speech Communication Association","topic":"Speech / Audio","tier":"A","start":"2026-09-06","end":"2026-09-10","city":"Sydney","country":"Australia","mode":"In-person","deadline":null,"deadline_type":null,"price":750,"price_note":"Student rate ~$400","url":"https://www.interspeech.org/","accept_rate":0.48,"h5":108},
 {"name":"SIGGRAPH 2026","full":"ACM SIGGRAPH Conference","topic":"Graphics & Interactive Techniques","tier":"A*","start":"2026-08-09","end":"2026-08-13","city":"Los Angeles","country":"USA","mode":"In-person","deadline":null,"deadline_type":null,"price":1100,"price_note":"Full conference; day passes cheaper","url":"https://www.siggraph.org/","accept_rate":0.2,"h5":121},
 {"name":"GTC 2027","full":"NVIDIA GPU Technology Conference","topic":"Systems / MLSys","tier":"Industry","start":"2027-03-22","end":"2027-03-26","city":"San Jose","country":"USA","mode":"Hybrid","deadline":"2026-10-15","deadline_type":"CFP (talks)","price":1200,"price_note":"Virtual attendance free","url":"https://www.nvidia.com/gtc/","accept_rate":null,"h5":null},
 {"name":"PyTorch Conf 2026","full":"PyTorch Conference","topic":"AI Engineering","tier":"Industry","start":"2026-10-22","end":"2026-10-23","city":"San Francisco","country":"USA","mode":"In-person","deadline":null,"deadline_type":null,"price":550,"price_note":"Student / academic discounts","url":"https://events.linuxfoundation.org/pytorch-conference/","accept_rate":null,"h5":null},
