@@ -75,3 +75,5 @@
 {"name":"ODSC West 2026","full":"Open Data Science Conference West","topic":"AI Engineering","tier":"Industry","start":"2026-11-03","end":"2026-11-05","city":"San Francisco","country":"USA","mode":"Hybrid","deadline":null,"deadline_type":null,"price":1200,"price_note":"Virtual pass cheaper","url":"https://odsc.com/","accept_rate":null,"h5":null},
 {"name":"AMLD 2027","full":"Applied Machine Learning Days","topic":"AI Engineering","tier":"Regional","start":"2027-02-06","end":"2027-02-09","city":"Lausanne","country":"Switzerland","mode":"In-person","deadline":null,"deadline_type":null,"price":500,"price_note":"Student rate lower","url":"https://www.appliedmldays.org/","accept_rate":null,"h5":null},
 {"name":"The AI Summit London 2027","full":"The AI Summit London","topic":"AI Engineering","tier":"Industry","start":"2027-06-09","end":"2027-06-10","city":"London","country":"UK","mode":"In-person","deadline":null,"deadline_type":null,"price":1800,"price_note":"Multiple pass tiers","url":"https://london.theaisummit.com/","accept_rate":null,"h5":null}
+]
+}
